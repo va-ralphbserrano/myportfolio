@@ -402,6 +402,9 @@ h3.my-profession
 {
     font-size: 16px;
     line-height: 25px;
+    text-align: justify;
+    margin-bottom: 16px;
+    text-indent: 20px;
     color: var(--text-black-700);
 }
 .about .about-content .personal-info
@@ -569,6 +572,7 @@ h3.my-profession
     line-height: 25px;
     font-size: 16px;
     text-align: justify;
+    text-indent: 20px;
     color: var(--text-black-700);
 }
 /* SERVICES */

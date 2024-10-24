@@ -4,7 +4,7 @@ function initTypingAnimation(selector, strings) {
         new Typed(selector, {
             strings: strings,
             typeSpeed: 100,
-            backSpeed: 100,
+            backSpeed: 60,
             loop: true,
         });
     }
@@ -12,6 +12,7 @@ function initTypingAnimation(selector, strings) {
 
 // Initialize Typing Animations
 initTypingAnimation(".home .typing", [
+    "AutoCAD Designer",
     "Web Designer", 
     "Web Developer", 
     "Video Editor", 
@@ -19,8 +20,10 @@ initTypingAnimation(".home .typing", [
 ]);
 
 initTypingAnimation(".about-text .typing", [
+    "AutoCAD Designer",
     "Web Designer", 
-    "Graphic Designer", 
+    "Web Developer", 
+    "Video Editor", 
     "Virtual Assistant"
 ]);
 
