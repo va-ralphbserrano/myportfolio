@@ -152,3 +152,4 @@ document.getElementById('contactForm').addEventListener('submit', function(event
         submitButton.textContent = 'Send'; // Reset button text
     }
 });
+

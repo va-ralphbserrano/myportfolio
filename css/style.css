@@ -985,6 +985,8 @@ h3.my-profession {
 .contact-info-item a:hover {
     color: var(--skin-color); /* Use your theme's skin color for hover */
 }
+
+
 @media (max-width: 1199px) {
     .section .container {
         padding-top: 70px;
