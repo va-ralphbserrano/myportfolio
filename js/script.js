@@ -113,3 +113,31 @@ function toggleAside() {
     navTogglerBtn.classList.toggle("open");
     allSections.forEach(section => section.classList.toggle("open"));
 }
+
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the default form submission
+
+    if (this.checkValidity()) {
+        // If the form is valid, submit it
+        fetch(this.action, {
+            method: this.method,
+            body: new FormData(this),
+            headers: {
+                'Accept': 'application/json' // Expect a JSON response
+            }
+        }).then(response => {
+            if (response.ok) {
+                // If the response is successful, reset the form
+                alert('Your message has been sent!');
+                this.reset(); // Clear the form fields
+            } else {
+                alert('There was a problem with your submission. Please try again.');
+            }
+        }).catch(error => {
+            alert('Error: ' + error.message);
+        });
+    } else {
+        // If the form is invalid, show a message or handle it as needed
+        alert('Please fill in all fields.');
+    }
+});
