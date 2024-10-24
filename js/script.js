@@ -117,11 +117,14 @@ function toggleAside() {
     allSections.forEach(section => section.classList.toggle("open"));
 }
 
+// Contact Form Submission
 document.getElementById('contactForm').addEventListener('submit', function(event) {
     event.preventDefault(); // Prevent the default form submission
+    const submitButton = this.querySelector('button[type="submit"]');
+    submitButton.disabled = true; // Disable button during submission
+    submitButton.textContent = 'Sending...'; // Provide feedback to the user
 
     if (this.checkValidity()) {
-        // If the form is valid, submit it
         fetch(this.action, {
             method: this.method,
             body: new FormData(this),
@@ -130,17 +133,22 @@ document.getElementById('contactForm').addEventListener('submit', function(event
             }
         }).then(response => {
             if (response.ok) {
-                // If the response is successful, reset the form
                 alert('Your message has been sent!');
                 this.reset(); // Clear the form fields
             } else {
+                console.error('Error: ', response.statusText); // Log errors for debugging
                 alert('There was a problem with your submission. Please try again.');
             }
         }).catch(error => {
+            console.error('Fetch Error: ', error); // Log errors for debugging
             alert('Error: ' + error.message);
+        }).finally(() => {
+            submitButton.disabled = false; // Re-enable button after submission
+            submitButton.textContent = 'Send'; // Reset button text
         });
     } else {
-        // If the form is invalid, show a message or handle it as needed
         alert('Please fill in all fields.');
+        submitButton.disabled = false; // Re-enable button if form is invalid
+        submitButton.textContent = 'Send'; // Reset button text
     }
 });
