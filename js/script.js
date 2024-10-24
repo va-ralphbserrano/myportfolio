@@ -113,3 +113,34 @@ function toggleAside() {
     navTogglerBtn.classList.toggle("open");
     allSections.forEach(section => section.classList.toggle("open"));
 }
+
+<script>
+    document.getElementById('submit-button').onclick = function(event) {
+        event.preventDefault(); // Prevent the form from submitting the default way
+
+        const formData = {
+            name: document.getElementById('name').value,
+            email: document.getElementById('email').value,
+            subject: document.getElementById('subject').value,
+            message: document.getElementById('message').value
+        };
+
+        fetch('https://script.google.com/macros/s/AKfycbwu1E0yvJLCIjrIDCLN4lqBkSs0pc9g4mvBei58TTMZBhfTRNOVz-HZVOpdY_w-JNdNrg/exec', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formData),
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);
+            alert('Message sent successfully!');
+            document.getElementById('contact-form').reset(); // Reset the form after submission
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+            alert('There was an error sending your message. Please try again later.');
+        });
+    };
+</script>
