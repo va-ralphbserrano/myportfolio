@@ -771,6 +771,7 @@ h3.my-profession {
 .overlay h4 {
     font-size: 20px;
     margin: 0;
+    text-align: center;
 }
 
 .overlay p {
@@ -778,6 +779,95 @@ h3.my-profession {
     margin: 0;
     text-align: center; /* Center align text in overlay */
 }
+
+
+/* CERTIFICATES */
+.certificates .container {
+    padding-bottom: 40px;
+}
+
+.certificates .certificate-heading {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 40px;
+}
+
+.certificates .certificate-heading h2 {
+    color: var(--text-black-900);
+    font-weight: 500;
+}
+
+.certificates .section-title {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 40px;
+}
+
+.certificates .section-title h2 {
+    color: var(--text-black-900);
+    font-weight: 500;
+}
+
+.certificates .certificate-item {
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+    margin-bottom: 30px;
+}
+
+.certificates .certificate-item .certificate-item-inner {
+    border: 6px solid var(--bg-black-100);
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+}
+
+.certificates .certificate-item-inner .certificate-img {
+    position: relative;
+}
+
+.certificates .certificate-item-inner .certificate-img img {
+    width: 100%;
+    display: block;
+    transition: transform 0.3s ease; /* Smooth zoom effect */
+}
+
+.certificates .certificate-item-inner .certificate-img:hover img {
+    transform: scale(1.05); /* Scale image on hover */
+}
+
+.certificates .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease; /* Fade effect */
+}
+
+.certificates .certificate-item-inner:hover .overlay {
+    opacity: 1; /* Show overlay on hover */
+}
+
+.overlay h4 {
+    font-size: 20px;
+    margin: 0;
+    text-align: center;
+}
+
+.overlay p {
+    font-size: 14px;
+    margin: 0;
+    text-align: center;
+}
+
 
 /* CONTACT */
 .contact-title {
@@ -927,6 +1017,7 @@ h3.my-profession {
 @media (max-width: 991px) {
     .contact .contact-info-item,
     .portfolio .portfolio-item,
+    .certificates .certificate-item,
     .service .service-item {
         flex: 0 0 50%;
         max-width: 50%;
@@ -944,6 +1035,7 @@ h3.my-profession {
     .contact .contact-form .col-6,
     .contact .contact-info-item,
     .portfolio .portfolio-item,
+    .certificates .certificate-item,
     .service .service-item,
     .about .about-content .education,
     .about .about-content .experience,
