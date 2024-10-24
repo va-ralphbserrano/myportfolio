@@ -727,7 +727,7 @@ h3.my-profession {
 }
 
 .portfolio .portfolio-item .portfolio-item-inner {
-    border: 6px solid var(--bg-black-100);
+    border: 6px solid var(--text-black-900);
     border-radius: 10px;
     overflow: hidden;
     cursor: pointer; /* Change cursor on hover */
@@ -815,7 +815,7 @@ h3.my-profession {
 }
 
 .certificates .certificate-item .certificate-item-inner {
-    border: 6px solid var(--bg-black-100);
+    border: 6px solid var(--text-black-900);
     border-radius: 10px;
     overflow: hidden;
     cursor: pointer;
