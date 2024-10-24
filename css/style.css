@@ -539,7 +539,7 @@ h3.my-profession
 }
 .about .about-content .timeline .timeline-item:last-child
 {
-    padding-bottom: 0;
+    padding-bottom: 20px;
 }
 .about .about-content .timeline .timeline-item::before
 {
@@ -588,6 +588,57 @@ h3.my-profession
     text-indent: 20px;
     color: var(--text-black-700);
 }
+
+.tools {
+    margin-top: 40px;
+}
+
+.tools .title {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--text-black-900);
+    margin-bottom: 20px;
+}
+
+.tool-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tool-category {
+    flex: 1 1 33.33%; /* Adjusts the width of each category column */
+    max-width: 33.33%; /* Minimum width for responsive design */
+    background-color: var(--bg-black-100);
+    padding: 30px 15px;
+    border: 1px solid var(--bg-black-50);
+    border-radius: 10px;
+    width: 100%;
+    position: relative;
+}
+
+.tool-category h4 {
+    font-weight: 600;
+    color: var(--skin-color);
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.tool-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.tool-item i {
+    margin-right: 10px; /* Adjust icon spacing */
+    color: var(--skin-color); /* Match your theme's skin color */
+}
+
+.tool-item span {
+    font-size: 16px;
+    color: var(--text-black-700);
+}
+
 /* SERVICES */
 .service .container
 {
