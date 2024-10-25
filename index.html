@@ -21,6 +21,9 @@
     <meta property="og:description" content="Explore my projects and skills as a Virtual Assistant and Video Editor.">
     <meta property="og:image" content="images/portfolio/portfolio-1.jpg">
     <meta property="og:url" content="https://va-ralphbserrano.github.io/myportfolio/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Ralph Bernard Serrano's Portfolio">
+    <meta property="og:locale" content="en_US">
 
     <!-- CSS FILES -->
     <link rel="stylesheet" href="css/style.css">
@@ -35,6 +38,8 @@
     <link rel="stylesheet" href="css/skins/color-5.css" class="alternate-style" title="color-5" disabled>
     <link rel="stylesheet" href="css/style-switcher.css">
 
+    <link rel="icon" href="favicon/favicon.ico" type="image/x-icon">
+
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-KBWSJEL4LY"></script>
     <script>
@@ -44,40 +49,61 @@
 
         gtag('config', 'G-KBWSJEL4LY');
     </script>
-</head>
 
+</head>
 
 <body>
     <!-- MAIN CONTAINER START -->
     <div class="main-container">
         <!-- ASIDE START -->
-        <div class="aside">
+        <div class="aside" itemscope itemtype="http://schema.org/SiteNavigationElement">
             <div class="logo">
-                <a href="#" id="logo" aria-label="Homepage"><span>T</span>hrive</a>
+                <a href="#" id="logo" aria-label="Homepage" itemprop="name"><span>T</span>hrive</a>
             </div>
             <div class="nav-toggler">
                 <span></span>
             </div>
             <ul class="nav" aria-label="Main Navigation">
-                <li><a href="#home" class="active"><i class="fa fa-home"></i> Home</a></li>
-                <li><a href="#about"><i class="fa fa-user"></i> About</a></li>
-                <li><a href="#services"><i class="fa fa-list"></i> Services</a></li>
-                <li><a href="#portfolio"><i class="fa fa-briefcase"></i> Portfolio</a></li>
-                <li><a href="#certificates"><i class="fa fa-certificate"></i> Certificates</a></li> <!-- New section -->
-                <li><a href="#contact"><i class="fa fa-comments"></i> Contact</a></li>
+                <li itemprop="itemListElement" itemscope itemtype="http://schema.org/SiteNavigationElement">
+                    <a href="#home" class="active" itemprop="url"><i class="fa fa-home"></i> <span
+                            itemprop="name">Home</span></a>
+                </li>
+                <li itemprop="itemListElement" itemscope itemtype="http://schema.org/SiteNavigationElement">
+                    <a href="#about" itemprop="url"><i class="fa fa-user"></i> <span itemprop="name">About</span></a>
+                </li>
+                <li itemprop="itemListElement" itemscope itemtype="http://schema.org/SiteNavigationElement">
+                    <a href="#services" itemprop="url"><i class="fa fa-list"></i> <span
+                            itemprop="name">Services</span></a>
+                </li>
+                <li itemprop="itemListElement" itemscope itemtype="http://schema.org/SiteNavigationElement">
+                    <a href="#portfolio" itemprop="url"><i class="fa fa-briefcase"></i> <span
+                            itemprop="name">Portfolio</span></a>
+                </li>
+                <li itemprop="itemListElement" itemscope itemtype="http://schema.org/SiteNavigationElement">
+                    <a href="#certificates" itemprop="url"><i class="fa fa-certificate"></i> <span
+                            itemprop="name">Certificates</span></a>
+                </li>
+                <li itemprop="itemListElement" itemscope itemtype="http://schema.org/SiteNavigationElement">
+                    <a href="#contact" itemprop="url"><i class="fa fa-comments"></i> <span
+                            itemprop="name">Contact</span></a>
+                </li>
             </ul>
         </div>
         <!-- ASIDE END -->
+
         <!-- MAIN CONTENT START -->
         <div class="main-content">
+
             <!-- HOME SECTION START -->
             <section class="home active section" id="home" itemscope itemtype="http://schema.org/Person">
                 <div class="container">
                     <div class="row">
                         <div class="home-info padd-15">
-                            <h1>WELCOME TO MY PORTFOLIO</h1>
-                            <h3 class="hello">Hello, my name is <span class="name" itemprop="givenName">Ralph
-                                    Bernard</span> <span itemprop="familyName">Serrano</span></h3>
+                            <h1 itemprop="name">WELCOME TO MY PORTFOLIO</h1>
+                            <h3 class="hello">
+                                Hello, my name is <span class="name" itemprop="givenName">Ralph Bernard</span>
+                                <span itemprop="familyName">Serrano</span>
+                            </h3>
                             <h3 class="my-profession">I'm a <span class="typing"></span></h3>
                             <p itemprop="description">
                                 With over 13 years of experience, I excel in project management and technical support. I
@@ -100,25 +126,29 @@
             <!-- HOME SECTION END -->
 
 
+
             <!-- ABOUT SECTION START -->
-            <section class="about section" id="about" aria-labelledby="about-title">
+            <section class="about section" id="about" aria-labelledby="about-title" itemscope
+                itemtype="http://schema.org/Person">
                 <div class="container">
                     <div class="row">
                         <div class="section-title padd-15">
-                            <h2 id="about-title">About Me</h2>
+                            <h2 id="about-title" itemprop="name">About Me</h2>
                         </div>
                     </div>
                     <div class="row">
                         <div class="about-content padd-15">
                             <div class="row">
                                 <div class="about-text padd-15">
-                                    <h3>I'm Ralph Bernard Serrano - <span class="typing"></span></h3>
-                                    <p>A dedicated professional with a diverse skill set encompassing <strong>AutoCAD
-                                            design</strong>, <strong>web design</strong>, <strong>web
-                                            development</strong>, <strong>video editing</strong>, and <strong>virtual
-                                            assistance</strong>. With 9 years of experience as an AutoCAD Designer and
-                                        Office Administrator, I have developed a keen eye for detail and a strong
-                                        ability to manage complex projects effectively.</p>
+                                    <h3>I'm <span itemprop="givenName">Ralph Bernard</span> <span
+                                            itemprop="familyName">Serrano</span> - <span class="typing"></span></h3>
+                                    <p itemprop="description">A dedicated professional with a diverse skill set
+                                        encompassing <strong>AutoCAD design</strong>, <strong>web design</strong>,
+                                        <strong>web development</strong>, <strong>video editing</strong>, and
+                                        <strong>virtual assistance</strong>. With 9 years of experience as an AutoCAD
+                                        Designer and Office Administrator, I have developed a keen eye for detail and a
+                                        strong ability to manage complex projects effectively.
+                                    </p>
                                     <p>Before transitioning into design, I owned a computer shop for 4 years, where I
                                         gained valuable business insights and honed my customer service skills. From
                                         2020 to 2024, I took on freelance design projects, allowing me to expand my
@@ -138,10 +168,10 @@
                             <div class="row">
                                 <div class="personal-info padd-15">
                                     <div class="row">
-                                        <div class="info-item padd-15">
+                                        <div class="info-item padd-15" itemprop="birthDate" content="1987-06-18">
                                             <p>Birthday: <span>18 June 1987</span></p>
                                         </div>
-                                        <div class="info-item padd-15">
+                                        <div class="info-item padd-15" itemprop="age" content="37">
                                             <p>Age: <span>37</span></p>
                                         </div>
                                         <div class="info-item padd-15">
@@ -165,7 +195,9 @@
                                             <p>Phone: <span><a href="tel:+639958462469">+63 995 846 2469</a></span></p>
                                         </div>
                                         <div class="info-item padd-15">
-                                            <p>City: <span>Muntinlupa</span></p>
+                                            <p>City: <span itemprop="address" itemscope
+                                                    itemtype="http://schema.org/PostalAddress"><span
+                                                        itemprop="addressLocality">Muntinlupa</span></span></p>
                                         </div>
                                         <div class="info-item padd-15">
                                             <p>Freelance: <span>Available</span></p>
@@ -198,7 +230,7 @@
                                             </div>
                                         </div>
                                         <div class="skill-item padd-15">
-                                            <h5>Video & Graphic Editing</h5>
+                                            <h5>Video Editing</h5>
                                             <p>Skilled in using tools like DaVinci Resolve to produce engaging video
                                                 content and visual designs for various platforms.</p>
                                             <div class="progress">
@@ -278,6 +310,7 @@
                                         </div>
                                     </div>
                                 </div>
+
                                 <div class="experience padd-15">
                                     <h3 class="title">Experience</h3>
                                     <div class="row">
@@ -353,119 +386,121 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="tools">
-                                <h3 class="title">Tools I'm Familiar With</h3>
+                            <div class="tools" itemscope itemtype="http://schema.org/ItemList">
+                                <h3 class="title" itemprop="name">Tools I'm Familiar With</h3>
                                 <div class="tool-container">
                                     <div class="tool-category">
-                                        <h4>Design Tools</h4>
-                                        <div class="tool-item">
+                                        <h4 itemprop="itemListElement">Design Tools</h4>
+                                        <div class="tool-item" itemscope itemtype="http://schema.org/Thing">
                                             <i class="fa fa-pencil-alt"></i>
-                                            <span>AutoCAD</span>
+                                            <span itemprop="name">AutoCAD</span>
                                         </div>
-                                        <div class="tool-item">
+                                        <div class="tool-item" itemscope itemtype="http://schema.org/Thing">
                                             <i class="fa fa-paint-brush"></i>
-                                            <span>Photoshop</span>
+                                            <span itemprop="name">Photoshop</span>
                                         </div>
-                                        <div class="tool-item">
+                                        <div class="tool-item" itemscope itemtype="http://schema.org/Thing">
                                             <i class="fa fa-desktop"></i>
-                                            <span>Illustrator</span>
+                                            <span itemprop="name">Illustrator</span>
                                         </div>
-                                        <div class="tool-item">
+                                        <div class="tool-item" itemscope itemtype="http://schema.org/Thing">
                                             <i class="fa fa-desktop"></i>
-                                            <span>Canva</span>
+                                            <span itemprop="name">Canva</span>
                                         </div>
                                     </div>
                                     <div class="tool-category">
-                                        <h4>Web Development</h4>
-                                        <div class="tool-item">
+                                        <h4 itemprop="itemListElement">Web Development</h4>
+                                        <div class="tool-item" itemscope itemtype="http://schema.org/Thing">
                                             <i class="fa fa-code"></i>
-                                            <span>HTML/CSS</span>
+                                            <span itemprop="name">HTML/CSS</span>
                                         </div>
-                                        <div class="tool-item">
+                                        <div class="tool-item" itemscope itemtype="http://schema.org/Thing">
                                             <i class="fa fa-js"></i>
-                                            <span>JavaScript</span>
+                                            <span itemprop="name">JavaScript</span>
                                         </div>
-                                        <div class="tool-item">
+                                        <div class="tool-item" itemscope itemtype="http://schema.org/Thing">
                                             <i class="fa fa-server"></i>
-                                            <span>Node.js</span>
+                                            <span itemprop="name">Node.js</span>
                                         </div>
-                                        <div class="tool-item">
+                                        <div class="tool-item" itemscope itemtype="http://schema.org/Thing">
                                             <i class="fa fa-wordpress"></i>
-                                            <span>WordPress</span>
+                                            <span itemprop="name">WordPress</span>
                                         </div>
                                     </div>
                                     <div class="tool-category">
-                                        <h4>Video Editing</h4>
-                                        <div class="tool-item">
+                                        <h4 itemprop="itemListElement">Video Editing</h4>
+                                        <div class="tool-item" itemscope itemtype="http://schema.org/Thing">
                                             <i class="fa fa-video"></i>
-                                            <span>DaVinci Resolve</span>
+                                            <span itemprop="name">DaVinci Resolve</span>
                                         </div>
-                                        <div class="tool-item">
+                                        <div class="tool-item" itemscope itemtype="http://schema.org/Thing">
                                             <i class="fa fa-film"></i>
-                                            <span>Adobe Premiere Pro (Learning)</span>
+                                            <span itemprop="name">Adobe Premiere Pro (Learning)</span>
                                         </div>
                                     </div>
                                     <div class="tool-category">
-                                        <h4>Project Management</h4>
-                                        <div class="tool-item">
+                                        <h4 itemprop="itemListElement">Project Management</h4>
+                                        <div class="tool-item" itemscope itemtype="http://schema.org/Thing">
                                             <i class="fa fa-tasks"></i>
-                                            <span>Asana</span>
+                                            <span itemprop="name">Asana</span>
                                         </div>
-                                        <div class="tool-item">
+                                        <div class="tool-item" itemscope itemtype="http://schema.org/Thing">
                                             <i class="fa fa-tasks"></i>
-                                            <span>ClickUp</span>
+                                            <span itemprop="name">ClickUp</span>
                                         </div>
                                     </div>
                                     <div class="tool-category">
-                                        <h4>Communication</h4>
-                                        <div class="tool-item">
+                                        <h4 itemprop="itemListElement">Communication</h4>
+                                        <div class="tool-item" itemscope itemtype="http://schema.org/Thing">
                                             <i class="fa fa-comments"></i>
-                                            <span>HubSpot</span>
+                                            <span itemprop="name">HubSpot</span>
                                         </div>
-                                        <div class="tool-item">
+                                        <div class="tool-item" itemscope itemtype="http://schema.org/Thing">
                                             <i class="fa fa-comments"></i>
-                                            <span>Keap</span>
+                                            <span itemprop="name">Keap</span>
                                         </div>
                                     </div>
                                     <div class="tool-category">
-                                        <h4>Office and Data Management</h4>
-                                        <div class="tool-item">
+                                        <h4 itemprop="itemListElement">Office and Data Management</h4>
+                                        <div class="tool-item" itemscope itemtype="http://schema.org/Thing">
                                             <i class="fa fa-file-alt"></i>
-                                            <span>Microsoft Office Suite (Word, Excel, PowerPoint, Outlook)</span>
+                                            <span itemprop="name">Microsoft Office Suite (Word, Excel, PowerPoint,
+                                                Outlook)</span>
                                         </div>
-                                        <div class="tool-item">
+                                        <div class="tool-item" itemscope itemtype="http://schema.org/Thing">
                                             <i class="fa fa-file-excel"></i>
-                                            <span>Data Analysis (Excel, Google Sheets)</span>
+                                            <span itemprop="name">Data Analysis (Excel, Google Sheets)</span>
                                         </div>
-                                        <div class="tool-item">
+                                        <div class="tool-item" itemscope itemtype="http://schema.org/Thing">
                                             <i class="fa fa-cloud"></i>
-                                            <span>Google Suite (Gmail, Drive, Docs, Sheets, Slides)</span>
+                                            <span itemprop="name">Google Suite (Gmail, Drive, Docs, Sheets,
+                                                Slides)</span>
                                         </div>
                                     </div>
                                     <div class="tool-category">
-                                        <h4>Customer Management</h4>
-                                        <div class="tool-item">
+                                        <h4 itemprop="itemListElement">Customer Management</h4>
+                                        <div class="tool-item" itemscope itemtype="http://schema.org/Thing">
                                             <i class="fa fa-user-friends"></i>
-                                            <span>CRM Software (Salesforce)</span>
+                                            <span itemprop="name">CRM Software (Salesforce)</span>
                                         </div>
-                                        <div class="tool-item">
+                                        <div class="tool-item" itemscope itemtype="http://schema.org/Thing">
                                             <i class="fa fa-headset"></i>
-                                            <span>Customer Support Software (Zendesk, Intercom)</span>
+                                            <span itemprop="name">Customer Support Software (Zendesk, Intercom)</span>
                                         </div>
                                     </div>
                                     <div class="tool-category">
-                                        <h4>Social Media Management</h4>
-                                        <div class="tool-item">
+                                        <h4 itemprop="itemListElement">Social Media Management</h4>
+                                        <div class="tool-item" itemscope itemtype="http://schema.org/Thing">
                                             <i class="fa fa-share-alt"></i>
-                                            <span>Facebook</span>
+                                            <span itemprop="name">Facebook</span>
                                         </div>
-                                        <div class="tool-item">
+                                        <div class="tool-item" itemscope itemtype="http://schema.org/Thing">
                                             <i class="fa fa-share-alt"></i>
-                                            <span>Instagram</span>
+                                            <span itemprop="name">Instagram</span>
                                         </div>
-                                        <div class="tool-item">
+                                        <div class="tool-item" itemscope itemtype="http://schema.org/Thing">
                                             <i class="fa fa-share-alt"></i>
-                                            <span>LinkedIn</span>
+                                            <span itemprop="name">LinkedIn</span>
                                         </div>
                                     </div>
                                 </div>
@@ -473,78 +508,78 @@
             </section>
             <!-- ABOUT SECTION END -->
             <!-- SERVICES SECTION START -->
-            <section class="service section" id="services">
+            <section class="service section" id="services" itemscope itemtype="http://schema.org/Service">
                 <div class="container">
                     <div class="row">
                         <div class="section-title padd-15">
-                            <h2>Services</h2>
+                            <h2 itemprop="serviceType">Services</h2>
                         </div>
                     </div>
                     <div class="row">
                         <!-- SERVICE ITEM: WEB DESIGN -->
-                        <div class="service-item padd-15">
+                        <div class="service-item padd-15" itemscope itemtype="http://schema.org/Service">
                             <div class="service-item-inner">
                                 <div class="icon">
                                     <i class="fa fa-palette"></i>
                                 </div>
-                                <h4>Web Design</h4>
-                                <p>I create visually appealing, responsive, and user-friendly websites that enhance user
-                                    experience.<br><br></p>
+                                <h4 itemprop="name">Web Design</h4>
+                                <p itemprop="description">I create visually appealing, responsive, and user-friendly
+                                    websites that enhance user experience.<br><br></p>
                             </div>
                         </div>
                         <!-- SERVICE ITEM: WEB DEVELOPMENT -->
-                        <div class="service-item padd-15">
+                        <div class="service-item padd-15" itemscope itemtype="http://schema.org/Service">
                             <div class="service-item-inner">
                                 <div class="icon">
                                     <i class="fa fa-laptop-code"></i>
                                 </div>
-                                <h4>Web Development</h4>
-                                <p>I develop functional websites with HTML, CSS, and JavaScript, ensuring seamless
-                                    performance and design consistency.</p>
+                                <h4 itemprop="name">Web Development</h4>
+                                <p itemprop="description">I develop functional websites with HTML, CSS, and JavaScript,
+                                    ensuring seamless performance and design consistency.</p>
                             </div>
                         </div>
                         <!-- SERVICE ITEM: VIDEO EDITING -->
-                        <div class="service-item padd-15">
+                        <div class="service-item padd-15" itemscope itemtype="http://schema.org/Service">
                             <div class="service-item-inner">
                                 <div class="icon">
                                     <i class="fa fa-video"></i>
                                 </div>
-                                <h4>Video Editing</h4>
-                                <p>I produce engaging video content using tools like DaVinci Resolve, delivering
-                                    polished results for various media platforms.</p>
+                                <h4 itemprop="name">Video Editing</h4>
+                                <p itemprop="description">I produce engaging video content using tools like DaVinci
+                                    Resolve, delivering polished results for various media platforms.</p>
                             </div>
                         </div>
                         <!-- SERVICE ITEM: VIRTUAL ASSISTANCE -->
-                        <div class="service-item padd-15">
+                        <div class="service-item padd-15" itemscope itemtype="http://schema.org/Service">
                             <div class="service-item-inner">
                                 <div class="icon">
                                     <i class="fa fa-headset"></i>
                                 </div>
-                                <h4>Virtual Assistance</h4>
-                                <p>I provide administrative support, including scheduling, email management, and client
-                                    coordination for efficient operations.</p>
+                                <h4 itemprop="name">Virtual Assistance</h4>
+                                <p itemprop="description">I provide administrative support, including scheduling, email
+                                    management, and client coordination for efficient operations.</p>
                             </div>
                         </div>
                         <!-- SERVICE ITEM: SOCIAL MEDIA MANAGEMENT -->
-                        <div class="service-item padd-15">
+                        <div class="service-item padd-15" itemscope itemtype="http://schema.org/Service">
                             <div class="service-item-inner">
                                 <div class="icon">
                                     <i class="fa fa-search"></i>
                                 </div>
-                                <h4>Social Media Management</h4>
-                                <p>I help businesses build their online presence by managing social media accounts and
-                                    creating engaging content.</p>
+                                <h4 itemprop="name">Social Media Management</h4>
+                                <p itemprop="description">I help businesses build their online presence by managing
+                                    social media accounts and creating engaging content.</p>
                             </div>
                         </div>
                         <!-- SERVICE ITEM: PROJECT MANAGEMENT -->
-                        <div class="service-item padd-15">
+                        <div class="service-item padd-15" itemscope itemtype="http://schema.org/Service">
                             <div class="service-item-inner">
                                 <div class="icon">
                                     <i class="fa fa-tasks"></i>
                                 </div>
-                                <h4>Project Management</h4>
-                                <p>I streamline workflows and coordinate teams using tools like Asana and ClickUp to
-                                    achieve project goals efficiently.</p>
+                                <h4 itemprop="name">Project Management</h4>
+                                <p itemprop="description">I streamline workflows and coordinate teams using tools like
+                                    Asana and ClickUp to achieve project goals efficiently.</p>
                             </div>
                         </div>
                     </div>
@@ -553,10 +588,10 @@
             <!-- SERVICES SECTION END -->
             <!-- PORTFOLIO SECTION START -->
             <section class="portfolio section" id="portfolio">
-                <div class="container">
+                <div class="container" itemscope itemtype="http://schema.org/ItemList">
                     <div class="row">
                         <div class="section-title padd-15">
-                            <h2>Portfolio</h2>
+                            <h2 itemprop="name">Portfolio</h2>
                         </div>
                     </div>
                     <div class="row">
@@ -566,13 +601,14 @@
                     </div>
                     <div class="row" id="portfolioItems">
                         <!-- PORTFOLIO ITEM START -->
-                        <div class="portfolio-item padd-15">
+                        <div class="portfolio-item padd-15" itemscope itemtype="http://schema.org/CreativeWork">
                             <div class="portfolio-item-inner shadow-dark">
                                 <div class="portfolio-img">
-                                    <img src="images/portfolio/portfolio-1.jpg" alt="Responsive Website Design">
+                                    <img src="images/portfolio/portfolio-1.jpg" alt="Responsive Website Design"
+                                        itemprop="image">
                                     <div class="overlay">
-                                        <h4>Project 1</h4>
-                                        <p>Responsive Website Design</p>
+                                        <h4 itemprop="name">Project 1</h4>
+                                        <p itemprop="description">Responsive Website Design</p>
                                     </div>
                                 </div>
                             </div>
@@ -580,13 +616,14 @@
                         <!-- PORTFOLIO ITEM END -->
 
                         <!-- PORTFOLIO ITEM START -->
-                        <div class="portfolio-item padd-15">
+                        <div class="portfolio-item padd-15" itemscope itemtype="http://schema.org/CreativeWork">
                             <div class="portfolio-item-inner shadow-dark">
                                 <div class="portfolio-img">
-                                    <img src="images/portfolio/portfolio-2.jpg" alt="JavaScript Web App Development">
+                                    <img src="images/portfolio/portfolio-2.jpg" alt="JavaScript Web App Development"
+                                        itemprop="image">
                                     <div class="overlay">
-                                        <h4>Project 2</h4>
-                                        <p>JavaScript Web App Development</p>
+                                        <h4 itemprop="name">Project 2</h4>
+                                        <p itemprop="description">JavaScript Web App Development</p>
                                     </div>
                                 </div>
                             </div>
@@ -594,13 +631,14 @@
                         <!-- PORTFOLIO ITEM END -->
 
                         <!-- PORTFOLIO ITEM START -->
-                        <div class="portfolio-item padd-15">
+                        <div class="portfolio-item padd-15" itemscope itemtype="http://schema.org/CreativeWork">
                             <div class="portfolio-item-inner shadow-dark">
                                 <div class="portfolio-img">
-                                    <img src="images/portfolio/portfolio-3.jpg" alt="Graphic Design for Marketing">
+                                    <img src="images/portfolio/portfolio-3.jpg" alt="Graphic Design for Marketing"
+                                        itemprop="image">
                                     <div class="overlay">
-                                        <h4>Project 3</h4>
-                                        <p>Graphic Design for Marketing</p>
+                                        <h4 itemprop="name">Project 3</h4>
+                                        <p itemprop="description">Graphic Design for Marketing</p>
                                     </div>
                                 </div>
                             </div>
@@ -608,13 +646,14 @@
                         <!-- PORTFOLIO ITEM END -->
 
                         <!-- PORTFOLIO ITEM START -->
-                        <div class="portfolio-item padd-15">
+                        <div class="portfolio-item padd-15" itemscope itemtype="http://schema.org/CreativeWork">
                             <div class="portfolio-item-inner shadow-dark">
                                 <div class="portfolio-img">
-                                    <img src="images/portfolio/portfolio-4.jpg" alt="E-commerce Website Development">
+                                    <img src="images/portfolio/portfolio-4.jpg" alt="E-commerce Website Development"
+                                        itemprop="image">
                                     <div class="overlay">
-                                        <h4>Project 4</h4>
-                                        <p>E-commerce Website Development</p>
+                                        <h4 itemprop="name">Project 4</h4>
+                                        <p itemprop="description">E-commerce Website Development</p>
                                     </div>
                                 </div>
                             </div>
@@ -622,14 +661,14 @@
                         <!-- PORTFOLIO ITEM END -->
 
                         <!-- PORTFOLIO ITEM START -->
-                        <div class="portfolio-item padd-15">
+                        <div class="portfolio-item padd-15" itemscope itemtype="http://schema.org/CreativeWork">
                             <div class="portfolio-item-inner shadow-dark">
                                 <div class="portfolio-img">
                                     <img src="images/portfolio/portfolio-5.jpg"
-                                        alt="Video Editing for Promotional Content">
+                                        alt="Video Editing for Promotional Content" itemprop="image">
                                     <div class="overlay">
-                                        <h4>Project 5</h4>
-                                        <p>Video Editing for Promotional Content</p>
+                                        <h4 itemprop="name">Project 5</h4>
+                                        <p itemprop="description">Video Editing for Promotional Content</p>
                                     </div>
                                 </div>
                             </div>
@@ -637,13 +676,14 @@
                         <!-- PORTFOLIO ITEM END -->
 
                         <!-- PORTFOLIO ITEM START -->
-                        <div class="portfolio-item padd-15">
+                        <div class="portfolio-item padd-15" itemscope itemtype="http://schema.org/CreativeWork">
                             <div class="portfolio-item-inner shadow-dark">
                                 <div class="portfolio-img">
-                                    <img src="images/portfolio/portfolio-6.jpg" alt="Mobile App UI/UX Design">
+                                    <img src="images/portfolio/portfolio-6.jpg" alt="Mobile App UI/UX Design"
+                                        itemprop="image">
                                     <div class="overlay">
-                                        <h4>Project 6</h4>
-                                        <p>Mobile App UI/UX Design</p>
+                                        <h4 itemprop="name">Project 6</h4>
+                                        <p itemprop="description">Mobile App UI/UX Design</p>
                                     </div>
                                 </div>
                             </div>
@@ -651,13 +691,13 @@
                         <!-- PORTFOLIO ITEM END -->
 
                         <!-- PORTFOLIO ITEM START -->
-                        <div class="portfolio-item padd-15">
+                        <div class="portfolio-item padd-15" itemscope itemtype="http://schema.org/CreativeWork">
                             <div class="portfolio-item-inner shadow-dark">
                                 <div class="portfolio-img">
-                                    <img src="images/portfolio/portfolio-7.jpg" alt="Logo Design">
+                                    <img src="images/portfolio/portfolio-7.jpg" alt="Logo Design" itemprop="image">
                                     <div class="overlay">
-                                        <h4>Project 7</h4>
-                                        <p>Logo Design</p>
+                                        <h4 itemprop="name">Project 7</h4>
+                                        <p itemprop="description">Logo Design</p>
                                     </div>
                                 </div>
                             </div>
@@ -665,13 +705,14 @@
                         <!-- PORTFOLIO ITEM END -->
 
                         <!-- PORTFOLIO ITEM START -->
-                        <div class="portfolio-item padd-15">
+                        <div class="portfolio-item padd-15" itemscope itemtype="http://schema.org/CreativeWork">
                             <div class="portfolio-item-inner shadow-dark">
                                 <div class="portfolio-img">
-                                    <img src="images/portfolio/portfolio-8.jpg" alt="Social Media Campaign">
+                                    <img src="images/portfolio/portfolio-8.jpg" alt="Social Media Campaign"
+                                        itemprop="image">
                                     <div class="overlay">
-                                        <h4>Project 8</h4>
-                                        <p>Social Media Campaign</p>
+                                        <h4 itemprop="name">Project 8</h4>
+                                        <p itemprop="description">Social Media Campaign</p>
                                     </div>
                                 </div>
                             </div>
@@ -685,11 +726,11 @@
             <!-- PORTFOLIO SECTION END -->
 
             <!-- CERTIFICATES SECTION START -->
-            <section class="certificates section" id="certificates">
+            <section class="certificates section" id="certificates" itemscope itemtype="http://schema.org/ItemList">
                 <div class="container">
                     <div class="row">
                         <div class="section-title padd-15">
-                            <h2>My Professional Certificates</h2>
+                            <h2 itemprop="name">My Professional Certificates</h2>
                         </div>
                     </div>
                     <div class="row">
@@ -699,15 +740,15 @@
                     </div>
                     <div class="row" id="certificates-container">
                         <!-- CERTIFICATE ITEM START -->
-                        <div class="certificate-item padd-15">
+                        <div class="certificate-item padd-15" itemscope itemtype="http://schema.org/CreativeWork">
                             <div class="certificate-item-inner shadow-dark">
                                 <div class="certificate-img">
                                     <img src="images/certificate/Apprenticeship Certificate.png"
                                         alt="Executive Assistant Apprenticeship Certificate from Surge Freelancing Marketplace, 2024"
-                                        class="certificate-thumbnail">
+                                        class="certificate-thumbnail" itemprop="image">
                                     <div class="overlay">
-                                        <h4>Executive Assistant Apprenticeship Program</h4>
-                                        <p>Surge Freelancing Marketplace, 2024</p>
+                                        <h4 itemprop="name">Executive Assistant Apprenticeship Program</h4>
+                                        <p itemprop="description">Surge Freelancing Marketplace, 2024</p>
                                     </div>
                                 </div>
                             </div>
@@ -715,15 +756,15 @@
                         <!-- CERTIFICATE ITEM END -->
 
                         <!-- CERTIFICATE ITEM START -->
-                        <div class="certificate-item padd-15">
+                        <div class="certificate-item padd-15" itemscope itemtype="http://schema.org/CreativeWork">
                             <div class="certificate-item-inner shadow-dark">
                                 <div class="certificate-img">
                                     <img src="images/certificate/Gold Certificate Masterclass virtual assistant.png"
                                         alt="Gold Certificate in Masterclass for Virtual Assistant, Surge Freelancing Marketplace, 2024"
-                                        class="certificate-thumbnail">
+                                        class="certificate-thumbnail" itemprop="image">
                                     <div class="overlay">
-                                        <h4>Masterclass in Virtual Assistant</h4>
-                                        <p>Surge Freelancing Marketplace, 2024</p>
+                                        <h4 itemprop="name">Masterclass in Virtual Assistant</h4>
+                                        <p itemprop="description">Surge Freelancing Marketplace, 2024</p>
                                     </div>
                                 </div>
                             </div>
@@ -731,15 +772,15 @@
                         <!-- CERTIFICATE ITEM END -->
 
                         <!-- CERTIFICATE ITEM START -->
-                        <div class="certificate-item padd-15">
+                        <div class="certificate-item padd-15" itemscope itemtype="http://schema.org/CreativeWork">
                             <div class="certificate-item-inner shadow-dark">
                                 <div class="certificate-img">
                                     <img src="images/certificate/Best in Setting a Freelancing Brand.png"
                                         alt="Best in Setting a Freelancing Brand, Surge Freelancing Marketplace, 2024"
-                                        class="certificate-thumbnail">
+                                        class="certificate-thumbnail" itemprop="image">
                                     <div class="overlay">
-                                        <h4>Best in Setting a Freelancing Brand</h4>
-                                        <p>Surge Freelancing Marketplace, 2024</p>
+                                        <h4 itemprop="name">Best in Setting a Freelancing Brand</h4>
+                                        <p itemprop="description">Surge Freelancing Marketplace, 2024</p>
                                     </div>
                                 </div>
                             </div>
@@ -747,15 +788,15 @@
                         <!-- CERTIFICATE ITEM END -->
 
                         <!-- CERTIFICATE ITEM START -->
-                        <div class="certificate-item padd-15">
+                        <div class="certificate-item padd-15" itemscope itemtype="http://schema.org/CreativeWork">
                             <div class="certificate-item-inner shadow-dark">
                                 <div class="certificate-img">
                                     <img src="images/certificate/Best in Website Management.png"
                                         alt="Best in Website Management, Surge Freelancing Marketplace, 2024"
-                                        class="certificate-thumbnail">
+                                        class="certificate-thumbnail" itemprop="image">
                                     <div class="overlay">
-                                        <h4>Best in Website Management</h4>
-                                        <p>Surge Freelancing Marketplace, 2024</p>
+                                        <h4 itemprop="name">Best in Website Management</h4>
+                                        <p itemprop="description">Surge Freelancing Marketplace, 2024</p>
                                     </div>
                                 </div>
                             </div>
@@ -763,15 +804,15 @@
                         <!-- CERTIFICATE ITEM END -->
 
                         <!-- CERTIFICATE ITEM START -->
-                        <div class="certificate-item padd-15">
+                        <div class="certificate-item padd-15" itemscope itemtype="http://schema.org/CreativeWork">
                             <div class="certificate-item-inner shadow-dark">
                                 <div class="certificate-img">
                                     <img src="images/certificate/Getting Hired with these amazon virtual assistant task.png"
                                         alt="Getting Hired with Amazon Virtual Assistant Tasks, Surge Freelancing Marketplace, 2024"
-                                        class="certificate-thumbnail">
+                                        class="certificate-thumbnail" itemprop="image">
                                     <div class="overlay">
-                                        <h4>Getting Hired with Amazon Virtual Assistant Tasks</h4>
-                                        <p>Surge Freelancing Marketplace, 2024</p>
+                                        <h4 itemprop="name">Getting Hired with Amazon Virtual Assistant Tasks</h4>
+                                        <p itemprop="description">Surge Freelancing Marketplace, 2024</p>
                                     </div>
                                 </div>
                             </div>
@@ -779,15 +820,15 @@
                         <!-- CERTIFICATE ITEM END -->
 
                         <!-- CERTIFICATE ITEM START -->
-                        <div class="certificate-item padd-15">
+                        <div class="certificate-item padd-15" itemscope itemtype="http://schema.org/CreativeWork">
                             <div class="certificate-item-inner shadow-dark">
                                 <div class="certificate-img">
                                     <img src="images/certificate/Content Marketing Strategy in social media.png"
                                         alt="Content Marketing Strategy in Social Media, Surge Freelancing Marketplace, 2024"
-                                        class="certificate-thumbnail">
+                                        class="certificate-thumbnail" itemprop="image">
                                     <div class="overlay">
-                                        <h4>Content Marketing Strategy in Social Media</h4>
-                                        <p>Surge Freelancing Marketplace, 2024</p>
+                                        <h4 itemprop="name">Content Marketing Strategy in Social Media</h4>
+                                        <p itemprop="description">Surge Freelancing Marketplace, 2024</p>
                                     </div>
                                 </div>
                             </div>
@@ -795,47 +836,15 @@
                         <!-- CERTIFICATE ITEM END -->
 
                         <!-- CERTIFICATE ITEM START -->
-                        <div class="certificate-item padd-15">
-                            <div class="certificate-item-inner shadow-dark">
-                                <div class="certificate-img">
-                                    <img src="images/certificate/Getting Hired with these amazon virtual assistant task.png"
-                                        alt="Getting Hired with Amazon Virtual Assistant Tasks, Surge Freelancing Marketplace, 2024"
-                                        class="certificate-thumbnail">
-                                    <div class="overlay">
-                                        <h4>Getting Hired with Amazon Virtual Assistant Tasks</h4>
-                                        <p>Surge Freelancing Marketplace, 2024</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- CERTIFICATE ITEM END -->
-
-                        <!-- CERTIFICATE ITEM START -->
-                        <div class="certificate-item padd-15">
-                            <div class="certificate-item-inner shadow-dark">
-                                <div class="certificate-img">
-                                    <img src="images/certificate/Content Marketing Strategy in social media.png"
-                                        alt="Content Marketing Strategy in Social Media, Surge Freelancing Marketplace, 2024"
-                                        class="certificate-thumbnail">
-                                    <div class="overlay">
-                                        <h4>Content Marketing Strategy in Social Media</h4>
-                                        <p>Surge Freelancing Marketplace, 2024</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- CERTIFICATE ITEM END -->
-
-                        <!-- CERTIFICATE ITEM START -->
-                        <div class="certificate-item padd-15">
+                        <div class="certificate-item padd-15" itemscope itemtype="http://schema.org/CreativeWork">
                             <div class="certificate-item-inner shadow-dark">
                                 <div class="certificate-img">
                                     <img src="images/certificate/AnotherCertificate.jpg"
-                                        alt="Content Marketing Strategy in Social Media, Surge Freelancing Marketplace, 2024"
-                                        class="certificate-thumbnail">
+                                        alt="Another Certificate, Another Place, 2024" class="certificate-thumbnail"
+                                        itemprop="image">
                                     <div class="overlay">
-                                        <h4>Another Certificate</h4>
-                                        <p>Another Place, 2024</p>
+                                        <h4 itemprop="name">Another Certificate</h4>
+                                        <p itemprop="description">Another Place, 2024</p>
                                     </div>
                                 </div>
                             </div>
@@ -852,73 +861,76 @@
             <!-- CERTIFICATES SECTION END -->
 
             <!-- CONTACT SECTION START -->
-            <section class="contact section" id="contact">
+            <section class="contact section" id="contact" itemscope itemtype="http://schema.org/ContactPage">
                 <div class="container">
                     <div class="row">
                         <div class="section-title padd-15">
-                            <h2>Contact Me</h2>
+                            <h2 itemprop="name">Contact Me</h2>
                         </div>
                     </div>
                     <h3 class="contact-title padd-15">Do You Have Any Questions?</h3>
                     <h4 class="contact-sub-title padd-15">I'M AT YOUR SERVICE</h4>
                     <div class="row">
                         <!-- PHONE -->
-                        <div class="contact-info-item padd-15">
+                        <div class="contact-info-item padd-15" itemscope itemtype="http://schema.org/Organization">
                             <div class="icon"><i class="fa fa-phone"></i></div>
-                            <h4>Call Me On</h4>
-                            <p><a href="tel:+639958462469">+63 995 846 2469</a></p>
+                            <h4 itemprop="contactPoint">Call Me On</h4>
+                            <p itemprop="telephone"><a href="tel:+639958462469">+63 995 846 2469</a></p>
                         </div>
                         <!-- LOCATION -->
-                        <div class="contact-info-item padd-15">
+                        <div class="contact-info-item padd-15" itemscope itemtype="http://schema.org/Place">
                             <div class="icon"><i class="fa fa-map-marker-alt"></i></div>
                             <h4>Office</h4>
-                            <p>Muntinlupa, Philippines</p>
+                            <p itemprop="address">Muntinlupa, Philippines</p>
                         </div>
                         <!-- EMAIL -->
                         <div class="contact-info-item padd-15">
                             <div class="icon"><i class="fa fa-envelope"></i></div>
                             <h4>Email</h4>
-                            <p><a href="mailto:ralph.b.serrano@gmail.com">ralph.b.serrano@gmail.com</a></p>
+                            <p><a href="mailto:ralph.b.serrano@gmail.com" itemprop="email">ralph.b.serrano@gmail.com</a>
+                            </p>
                         </div>
                         <!-- LINKEDIN -->
-                        <div class="contact-info-item padd-15">
+                        <div class="contact-info-item padd-15" itemscope itemtype="http://schema.org/Person">
                             <div class="icon linkedin"><i class="fab fa-linkedin"></i></div>
                             <h4>LinkedIn</h4>
-                            <p><a href="https://linkedin.com/in/ralphbserrano"
-                                    target="_blank">linkedin.com/in/ralphbserrano</a></p>
+                            <p><a href="https://linkedin.com/in/ralphbserrano" target="_blank"
+                                    itemprop="sameAs">linkedin.com/in/ralphbserrano</a></p>
                         </div>
                         <!-- FACEBOOK -->
                         <div class="contact-info-item padd-15">
                             <div class="icon facebook"><i class="fab fa-facebook"></i></div>
                             <h4>Facebook</h4>
-                            <p><a href="https://www.facebook.com/va.ralphbserrano/"
-                                    target="_blank">facebook.com/va.ralphbserrano</a></p>
+                            <p><a href="https://www.facebook.com/va.ralphbserrano/" target="_blank"
+                                    itemprop="sameAs">facebook.com/va.ralphbserrano</a></p>
                         </div>
                         <!-- YOUTUBE -->
                         <div class="contact-info-item padd-15">
                             <div class="icon youtube"><i class="fab fa-youtube"></i></div>
                             <h4>YouTube</h4>
-                            <p><a href="https://www.youtube.com/@RalphBernardSerrano"
-                                    target="_blank">youtube.com/@RalphBernardSerrano</a></p>
+                            <p><a href="https://www.youtube.com/@RalphBernardSerrano" target="_blank"
+                                    itemprop="sameAs">youtube.com/@RalphBernardSerrano</a></p>
                         </div>
                     </div>
                 </div>
                 <h3 class="contact-title padd-15">SEND ME AN EMAIL</h3>
                 <h4 class="contact-sub-title padd-15">I'M VERY RESPONSIVE TO MESSAGES</h4>
                 <!-- CONTACT FORM -->
-                <form id="contactForm" action="https://formspree.io/f/xjkvkjal" method="POST">
+                <form id="contactForm" action="https://formspree.io/f/xjkvkjal" method="POST" itemscope
+                    itemtype="http://schema.org/EmailMessage">
                     <div class="row">
                         <div class="contact-form padd-15">
                             <div class="row">
                                 <div class="form-item col-6 padd-15">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" name="name" placeholder="Name" required>
+                                        <input type="text" class="form-control" name="name" placeholder="Name" required
+                                            itemprop="name">
                                     </div>
                                 </div>
                                 <div class="form-item col-6 padd-15">
                                     <div class="form-group">
                                         <input type="email" class="form-control" name="email" placeholder="Email"
-                                            required>
+                                            required itemprop="email">
                                     </div>
                                 </div>
                             </div>
@@ -926,15 +938,15 @@
                                 <div class="form-item col-12 padd-15">
                                     <div class="form-group">
                                         <input type="text" class="form-control" name="subject" placeholder="Subject"
-                                            required>
+                                            required itemprop="subject">
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="form-item col-12 padd-15">
                                     <div class="form-group">
-                                        <textarea class="form-control" name="message" placeholder="Message"
-                                            required></textarea>
+                                        <textarea class="form-control" name="message" placeholder="Message" required
+                                            itemprop="message"></textarea>
                                     </div>
                                 </div>
                             </div>
@@ -948,6 +960,7 @@
                 </form>
             </section>
             <!-- CONTACT SECTION END -->
+
         </div>
         <!-- MAIN CONTENT END -->
     </div>
