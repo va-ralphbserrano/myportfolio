@@ -153,3 +153,140 @@ document.getElementById('contactForm').addEventListener('submit', function(event
     }
 });
 
+// Portfolio Section Logic
+(function() {
+    const portfolioData = [
+        { img: 'images/portfolio/portfolio-1.jpg', title: 'Project 1', desc: 'Responsive Website Design' },
+        { img: 'images/portfolio/portfolio-2.jpg', title: 'Project 2', desc: 'JavaScript Web App Development' },
+        { img: 'images/portfolio/portfolio-3.jpg', title: 'Project 3', desc: 'Graphic Design for Marketing' },
+        { img: 'images/portfolio/portfolio-4.jpg', title: 'Project 4', desc: 'E-commerce Website Development' },
+        { img: 'images/portfolio/portfolio-5.jpg', title: 'Project 5', desc: 'Video Editing for Promotional Content' },
+        { img: 'images/portfolio/portfolio-6.jpg', title: 'Project 6', desc: 'Mobile App UI/UX Design' },
+        { img: 'images/portfolio/portfolio-7.jpg', title: 'Project 7', desc: 'Logo Design' },
+        { img: 'images/portfolio/portfolio-8.jpg', title: 'Project 8', desc: 'Social Media Campaign' },
+    ];
+
+    const itemsPerPage = 6;
+    let currentPage = 1;
+
+    function displayPortfolioItems(page) {
+        const startIndex = (page - 1) * itemsPerPage;
+        const endIndex = startIndex + itemsPerPage;
+        const itemsToDisplay = portfolioData.slice(startIndex, endIndex);
+
+        const portfolioContainer = document.getElementById('portfolioItems');
+        portfolioContainer.innerHTML = '';
+
+        itemsToDisplay.forEach(item => {
+            const portfolioItem = `
+                <div class="portfolio-item padd-15">
+                    <div class="portfolio-item-inner shadow-dark">
+                        <div class="portfolio-img">
+                            <img src="${item.img}" alt="${item.title}">
+                            <div class="overlay">
+                                <h4>${item.title}</h4>
+                                <p>${item.desc}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>`;
+            portfolioContainer.innerHTML += portfolioItem;
+        });
+    }
+
+    function setupPagination() {
+        const totalPages = Math.ceil(portfolioData.length / itemsPerPage);
+        const paginationContainer = document.getElementById('pagination');
+        paginationContainer.innerHTML = '';
+
+        for (let i = 1; i <= totalPages; i++) {
+            const pageButton = document.createElement('button');
+            pageButton.textContent = i;
+            pageButton.classList.add('page-btn');
+            if (i === currentPage) pageButton.classList.add('active');
+
+            pageButton.addEventListener('click', () => {
+                currentPage = i;
+                displayPortfolioItems(currentPage);
+                setupPagination();
+            });
+
+            paginationContainer.appendChild(pageButton);
+        }
+    }
+
+    displayPortfolioItems(currentPage);
+    setupPagination();
+})();
+
+// Certificates Section Logic
+(function() {
+    const certificates = [
+        { src: "images/certificate/Apprenticeship Certificate.png", title: "Executive Assistant Apprenticeship", description: "Surge Freelancing Marketplace, 2024" },
+        { src: "images/certificate/Gold Certificate Masterclass virtual assistant.png", title: "Masterclass in Virtual Assistant", description: "Surge Freelancing Marketplace, 2024" },
+        { src: "images/certificate/Best in Setting a Freelancing Brand.png", title: "Best in Setting a Freelancing Brand", description: "Surge Freelancing Marketplace, 2024" },
+        { src: "images/certificate/Best in Website Management.png", title: "Best in Website Management", description: "Surge Freelancing Marketplace, 2024" },
+        { src: "images/certificate/Getting Hired with these amazon virtual assistant task.png", title: "Amazon Virtual Assistant Tasks", description: "Surge Freelancing Marketplace, 2024" },
+        { src: "images/certificate/Content Marketing Strategy in social media.png", title: "Content Marketing Strategy", description: "Surge Freelancing Marketplace, 2024" },
+        { src: "images/certificate/AnotherCertificate.jpg", title: "Another Certificate", description: "Another Place, 2024" },
+    ];
+
+    const itemsPerPage = 6;
+    let currentPage = 1;
+
+    const itemsPerPagePortfolio = 6;
+    let currentPagePortfolio = 1;
+    
+    const itemsPerPageCertificates = 6;
+    let currentPageCertificates = 1;
+    function displayCertificates(page) {
+        const container = document.getElementById('certificates-container');
+        container.innerHTML = '';
+    
+        const start = (page - 1) * itemsPerPageCertificates;
+        const end = start + itemsPerPageCertificates;
+        const paginatedCertificates = certificates.slice(start, end);
+    
+        paginatedCertificates.forEach(cert => {
+            const certItem = `
+                <div class="certificate-item padd-15">
+                    <div class="certificate-item-inner shadow-dark">
+                        <div class="certificate-img">
+                            <img src="${cert.src}" alt="${cert.title}">
+                            <div class="overlay">
+                                <h4>${cert.title}</h4>
+                                <p>${cert.description}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>`;
+            container.innerHTML += certItem;
+        });
+    }
+    
+    function setupCertificatePagination() {
+        const pagination = document.getElementById('certificate-pagination');
+        pagination.innerHTML = '';
+    
+        const totalPages = Math.ceil(certificates.length / itemsPerPageCertificates);
+    
+        for (let i = 1; i <= totalPages; i++) {
+            const button = document.createElement('button');
+            button.innerText = i;
+            button.classList.add('page-btn');
+            if (i === currentPageCertificates) button.classList.add('active');
+    
+            button.addEventListener('click', () => {
+                currentPageCertificates = i;
+                displayCertificates(currentPageCertificates);
+                setupCertificatePagination();
+            });
+    
+            pagination.appendChild(button);
+        }
+    }
+        
+
+    displayCertificates(currentPageCertificates); // Ensure this matches the variable
+    setupCertificatePagination();       
+})();

@@ -782,6 +782,12 @@ h3.my-profession {
 
 
 /* CERTIFICATES */
+.certificates {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the items in the certificates section */
+}
+
 .certificates .container {
     padding-bottom: 40px;
 }
@@ -984,6 +990,40 @@ h3.my-profession {
 
 .contact-info-item a:hover {
     color: var(--skin-color); /* Use your theme's skin color for hover */
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+/* Centering for the certificate pagination */
+#certificate-pagination {
+    width: 100%; /* Set width to 100% for full container space */
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.page-btn {
+    padding: 8px 12px;
+    border: none;
+    background-color: var(--bg-black-100);
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.page-btn.active {
+    background-color: var(--text-black-900);
+    color: var(--bg-black-100);
+}
+
+.page-btn:hover {
+    background-color: var(--text-black-700);
+    color: var(--bg-black-100);
 }
 
 
