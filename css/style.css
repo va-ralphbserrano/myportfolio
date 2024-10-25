@@ -315,6 +315,12 @@ ul {
     max-width: 60%;
 }
 
+h1 {
+    font-size: 35px;
+    margin: 15px 0;
+    color: var(--skin-color);
+}
+
 h3.hello {
     font-size: 28px;
     margin: 15px 0;
