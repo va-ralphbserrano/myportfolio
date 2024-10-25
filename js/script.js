@@ -290,3 +290,4 @@ document.getElementById('contactForm').addEventListener('submit', function (even
     displayCertificates(currentPageCertificates); // Ensure this matches the variable
     setupCertificatePagination();
 })();
+
