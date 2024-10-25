@@ -1,44 +1,45 @@
 @import url('https://fonts.googleapis.com/css2?family=Clicker+Script&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-:root
-{
-    --bg-black-900:#f2f2fc;
-    --bg-black-100:#fdf9ff;
+
+:root {
+    --bg-black-900: #f2f2fc;
+    --bg-black-100: #fdf9ff;
     --bg-black-50: #e8dfec;
     --text-black-900: #302e4d;
     --text-black-700: #504e70;
 }
-body.dark
-{
-    --bg-black-900:#151515;
-    --bg-black-100:#222222;
+
+body.dark {
+    --bg-black-900: #151515;
+    --bg-black-100: #222222;
     --bg-black-50: #393939;
     --text-black-900: #ffffff;
     --text-black-700: #e9e9e9;
 }
-body
-{
+
+body {
     line-height: 1.5;
     font-size: 16px;
     font-family: 'Poppins' sans-serif;
 }
-*
-{
+
+* {
     margin: 0;
     padding: 0;
     outline: none;
     text-decoration: none;
     box-sizing: border-box;
 }
-::before,::after
-{
+
+::before,
+::after {
     box-sizing: border-box;
 }
-ul
-{
+
+ul {
     list-style-type: none;
 }
-.section
-{
+
+.section {
     background-color: var(--bg-black-900);
     min-height: 100vh;
     display: block;
@@ -54,62 +55,61 @@ ul
     overflow-x: hidden;
     transition: all 0.3s ease;
 }
-.section.back-section
-{
+
+.section.back-section {
     z-index: 1;
 }
-.section.active
-{
+
+.section.active {
     z-index: 2;
     opacity: 1;
     animation: slideSection 1s ease;
 }
-@keyframes slideSection
-{
-    0%
-    {
+
+@keyframes slideSection {
+    0% {
         transform: translateX(100%);
     }
-    100%
-    {
+
+    100% {
         transform: translateX(0%);
     }
 }
-.hidden
-{
+
+.hidden {
     display: none !important;
 }
-.padd-15
-{
+
+.padd-15 {
     padding-left: 15px;
     padding-right: 15px;
 }
-.container
-{
+
+.container {
     max-width: 1100px;
     width: 100%;
     margin: auto;
 }
-.section .container
-{
+
+.section .container {
     padding-top: 60px;
     padding-bottom: 70px;
 }
-.section-title
-{
+
+.section-title {
     flex: 0 0 100%;
     max-width: 100%;
     margin-bottom: 60px;
 }
-.section-title h2
-{
+
+.section-title h2 {
     font-size: 40px;
     color: var(--text-black-900);
     font-weight: 700;
     position: relative;
 }
-.section-title h2::before
-{
+
+.section-title h2::before {
     content: '';
     height: 4px;
     width: 50px;
@@ -118,8 +118,8 @@ ul
     top: 100%;
     left: 0;
 }
-.section-title h2::after
-{
+
+.section-title h2::after {
     content: '';
     height: 4px;
     width: 25px;
@@ -129,16 +129,16 @@ ul
     left: 0;
     margin-top: 8px;
 }
-.row
-{
+
+.row {
     display: flex;
     flex-wrap: wrap;
     margin-left: -15px;
     margin-right: -15px;
     position: relative;
 }
-.btn
-{
+
+.btn {
     font-size: 16px;
     font-weight: 500;
     padding: 12px 35px;
@@ -150,17 +150,17 @@ ul
     background: var(--skin-color);
     transition: all 0.3s ease;
 }
-.btn:hover
-{
+
+.btn:hover {
     transform: scale(1.05);
 }
-.shadow-dark
-{
+
+.shadow-dark {
     box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
 }
+
 /* ASIDE */
-.aside
-{
+.aside {
     width: 270px;
     background-color: var(--bg-black-100);
     position: fixed;
@@ -175,15 +175,15 @@ ul
     z-index: 10;
     transition: all 0.3s ease;
 }
-.aside .logo
-{
+
+.aside .logo {
     position: absolute;
     top: 50px;
     font-size: 30px;
     text-transform: capitalize;
 }
-.aside .logo a
-{
+
+.aside .logo a {
     color: var(--text-black-900);
     font-weight: 700;
     padding: 15px 20px;
@@ -191,13 +191,13 @@ ul
     letter-spacing: 5px;
     position: relative;
 }
-.aside .logo a span
-{
+
+.aside .logo a span {
     font-family: 'Clicker Script', cursive;
     font-size: 40px;
 }
-.aside .logo a::before
-{
+
+.aside .logo a::before {
     content: '';
     position: absolute;
     width: 20px;
@@ -207,8 +207,8 @@ ul
     bottom: 0;
     left: 0;
 }
-.aside .logo a::after
-{
+
+.aside .logo a::after {
     content: '';
     position: absolute;
     width: 20px;
@@ -218,8 +218,8 @@ ul
     top: 0;
     right: 0;
 }
-.aside .nav-toggler
-{
+
+.aside .nav-toggler {
     height: 40px;
     width: 45px;
     border: 1px solid var(--bg-black-50);
@@ -234,20 +234,20 @@ ul
     justify-content: center;
     transition: all 0.3s ease;
 }
-.aside .nav-toggler span
-{
+
+.aside .nav-toggler span {
     height: 2px;
     width: 18px;
     background: var(--skin-color);
     display: inline-block;
     position: relative;
 }
-.aside .nav-toggler.open span
-{
+
+.aside .nav-toggler.open span {
     background-color: transparent;
 }
-.aside .nav-toggler span::before
-{
+
+.aside .nav-toggler span::before {
     content: '';
     height: 2px;
     width: 18px;
@@ -256,13 +256,13 @@ ul
     top: -6px;
     left: 0;
 }
-.aside .nav-toggler.open span::before
-{
+
+.aside .nav-toggler.open span::before {
     transform: rotate(45deg);
     top: 0;
 }
-.aside .nav-toggler span::after
-{
+
+.aside .nav-toggler span::after {
     content: '';
     height: 2px;
     width: 18px;
@@ -271,22 +271,22 @@ ul
     top: 6px;
     left: 0;
 }
-.aside .nav-toggler.open span::after
-{
+
+.aside .nav-toggler.open span::after {
     transform: rotate(-45deg);
     top: 0;
 }
-.aside .nav
-{
+
+.aside .nav {
     margin-top: 50px;
 }
-.aside .nav li
-{
+
+.aside .nav li {
     margin-bottom: 20px;
     display: block;
 }
-.aside .nav li a
-{
+
+.aside .nav li a {
     font-size: 16px;
     font-weight: 600;
     display: block;
@@ -294,14 +294,15 @@ ul
     color: var(--text-black-900);
     padding: 5px 15px;
 }
-.aside .nav li a.active
-{
+
+.aside .nav li a.active {
     color: var(--skin-color);
 }
-.aside .nav li a i
-{
+
+.aside .nav li a i {
     margin-right: 15px;
 }
+
 /* HOME */
 .home {
     min-height: 100vh;
@@ -730,22 +731,27 @@ h3.my-profession {
     border: 6px solid var(--text-black-900);
     border-radius: 10px;
     overflow: hidden;
-    cursor: pointer; /* Change cursor on hover */
-    position: relative; /* Important for overlay positioning */
+    cursor: pointer;
+    /* Change cursor on hover */
+    position: relative;
+    /* Important for overlay positioning */
 }
 
 .portfolio .portfolio-item-inner .portfolio-img {
-    position: relative; /* Position relative for absolute overlay */
+    position: relative;
+    /* Position relative for absolute overlay */
 }
 
 .portfolio .portfolio-item-inner .portfolio-img img {
     width: 100%;
     display: block;
-    transition: transform 0.3s ease; /* Smooth zoom effect */
+    transition: transform 0.3s ease;
+    /* Smooth zoom effect */
 }
 
 .portfolio .portfolio-item-inner .portfolio-img:hover img {
-    transform: scale(1.05); /* Scale image on hover */
+    transform: scale(1.05);
+    /* Scale image on hover */
 }
 
 .portfolio .overlay {
@@ -754,18 +760,23 @@ h3.my-profession {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.6); /* Dark overlay */
-    color: #fff; /* Text color for overlay */
+    background-color: rgba(0, 0, 0, 0.6);
+    /* Dark overlay */
+    color: #fff;
+    /* Text color for overlay */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    opacity: 0; /* Hidden by default */
-    transition: opacity 0.3s ease; /* Fade effect */
+    opacity: 0;
+    /* Hidden by default */
+    transition: opacity 0.3s ease;
+    /* Fade effect */
 }
 
 .portfolio .portfolio-item-inner:hover .overlay {
-    opacity: 1; /* Show overlay on hover */
+    opacity: 1;
+    /* Show overlay on hover */
 }
 
 .overlay h4 {
@@ -777,7 +788,8 @@ h3.my-profession {
 .overlay p {
     font-size: 14px;
     margin: 0;
-    text-align: center; /* Center align text in overlay */
+    text-align: center;
+    /* Center align text in overlay */
 }
 
 
@@ -785,7 +797,8 @@ h3.my-profession {
 .certificates {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center the items in the certificates section */
+    align-items: center;
+    /* Center the items in the certificates section */
 }
 
 .certificates .container {
@@ -835,11 +848,13 @@ h3.my-profession {
 .certificates .certificate-item-inner .certificate-img img {
     width: 100%;
     display: block;
-    transition: transform 0.3s ease; /* Smooth zoom effect */
+    transition: transform 0.3s ease;
+    /* Smooth zoom effect */
 }
 
 .certificates .certificate-item-inner .certificate-img:hover img {
-    transform: scale(1.05); /* Scale image on hover */
+    transform: scale(1.05);
+    /* Scale image on hover */
 }
 
 .certificates .overlay {
@@ -855,11 +870,13 @@ h3.my-profession {
     justify-content: center;
     align-items: center;
     opacity: 0;
-    transition: opacity 0.3s ease; /* Fade effect */
+    transition: opacity 0.3s ease;
+    /* Fade effect */
 }
 
 .certificates .certificate-item-inner:hover .overlay {
-    opacity: 1; /* Show overlay on hover */
+    opacity: 1;
+    /* Show overlay on hover */
 }
 
 .overlay h4 {
@@ -968,17 +985,20 @@ h3.my-profession {
 /* CONTACT INFO ICON COLORS */
 .contact-info-item .icon.linkedin .fab {
     font-size: 25px;
-    color: var(--skin-color); /* LinkedIn Blue */
+    color: var(--skin-color);
+    /* LinkedIn Blue */
 }
 
 .contact-info-item .icon.facebook .fab {
     font-size: 25px;
-    color: var(--skin-color); /* Facebook Blue */
+    color: var(--skin-color);
+    /* Facebook Blue */
 }
 
 .contact-info-item .icon.youtube .fab {
     font-size: 25px;
-    color: var(--skin-color); /* YouTube Red */
+    color: var(--skin-color);
+    /* YouTube Red */
 }
 
 /* Optional Hover Effects for Links */
@@ -989,7 +1009,8 @@ h3.my-profession {
 }
 
 .contact-info-item a:hover {
-    color: var(--skin-color); /* Use your theme's skin color for hover */
+    color: var(--skin-color);
+    /* Use your theme's skin color for hover */
 }
 
 .pagination {
@@ -1001,7 +1022,8 @@ h3.my-profession {
 
 /* Centering for the certificate pagination */
 #certificate-pagination {
-    width: 100%; /* Set width to 100% for full container space */
+    width: 100%;
+    /* Set width to 100% for full container space */
     display: flex;
     justify-content: center;
     margin-top: 20px;
@@ -1031,25 +1053,32 @@ h3.my-profession {
     .section .container {
         padding-top: 70px;
     }
+
     .aside {
         left: -270px;
     }
+
     .aside.open {
         left: 0;
     }
+
     .aside .nav-toggler {
         display: flex;
         left: 30px;
     }
+
     .aside .nav-toggler.open {
         left: 300px;
     }
+
     .section {
         left: 0;
     }
+
     .section.open {
         left: 270px;
     }
+
     .about .about-content .personal-info .info-item p span {
         display: block;
         margin-left: 0;
@@ -1057,6 +1086,7 @@ h3.my-profession {
 }
 
 @media (max-width: 991px) {
+
     .contact .contact-info-item,
     .portfolio .portfolio-item,
     .certificates .certificate-item,
@@ -1064,16 +1094,19 @@ h3.my-profession {
         flex: 0 0 50%;
         max-width: 50%;
     }
+
     .home .home-info {
         flex: 0 0 100%;
         max-width: 100%;
     }
+
     .home .home-img {
         display: none;
     }
 }
 
 @media (max-width: 767px) {
+
     .contact .contact-form .col-6,
     .contact .contact-info-item,
     .portfolio .portfolio-item,

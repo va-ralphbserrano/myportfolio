@@ -13,17 +13,17 @@ function initTypingAnimation(selector, strings) {
 // Initialize Typing Animations
 initTypingAnimation(".home .typing", [
     "AutoCAD Designer",
-    "Web Designer", 
-    "Web Developer", 
-    "Video Editor", 
+    "Web Designer",
+    "Web Developer",
+    "Video Editor",
     "Virtual Assistant"
 ]);
 
 initTypingAnimation(".about-text .typing", [
     "AutoCAD Designer",
-    "Web Designer", 
-    "Web Developer", 
-    "Video Editor", 
+    "Web Designer",
+    "Web Developer",
+    "Video Editor",
     "Virtual Assistant"
 ]);
 
@@ -63,7 +63,7 @@ function updateNav(element) {
 // Handle navigation clicks
 navLinks.forEach((link, index) => {
     link.addEventListener("click", function () {
-        const currentActiveIndex = [...navLinks].findIndex(link => 
+        const currentActiveIndex = [...navLinks].findIndex(link =>
             link.classList.contains("active")
         );
 
@@ -118,7 +118,7 @@ function toggleAside() {
 }
 
 // Contact Form Submission
-document.getElementById('contactForm').addEventListener('submit', function(event) {
+document.getElementById('contactForm').addEventListener('submit', function (event) {
     event.preventDefault(); // Prevent the default form submission
     const submitButton = this.querySelector('button[type="submit"]');
     submitButton.disabled = true; // Disable button during submission
@@ -154,7 +154,7 @@ document.getElementById('contactForm').addEventListener('submit', function(event
 });
 
 // Portfolio Section Logic
-(function() {
+(function () {
     const portfolioData = [
         { img: 'images/portfolio/portfolio-1.jpg', title: 'Project 1', desc: 'Responsive Website Design' },
         { img: 'images/portfolio/portfolio-2.jpg', title: 'Project 2', desc: 'JavaScript Web App Development' },
@@ -220,7 +220,7 @@ document.getElementById('contactForm').addEventListener('submit', function(event
 })();
 
 // Certificates Section Logic
-(function() {
+(function () {
     const certificates = [
         { src: "images/certificate/Apprenticeship Certificate.png", title: "Executive Assistant Apprenticeship", description: "Surge Freelancing Marketplace, 2024" },
         { src: "images/certificate/Gold Certificate Masterclass virtual assistant.png", title: "Masterclass in Virtual Assistant", description: "Surge Freelancing Marketplace, 2024" },
@@ -236,17 +236,17 @@ document.getElementById('contactForm').addEventListener('submit', function(event
 
     const itemsPerPagePortfolio = 6;
     let currentPagePortfolio = 1;
-    
+
     const itemsPerPageCertificates = 6;
     let currentPageCertificates = 1;
     function displayCertificates(page) {
         const container = document.getElementById('certificates-container');
         container.innerHTML = '';
-    
+
         const start = (page - 1) * itemsPerPageCertificates;
         const end = start + itemsPerPageCertificates;
         const paginatedCertificates = certificates.slice(start, end);
-    
+
         paginatedCertificates.forEach(cert => {
             const certItem = `
                 <div class="certificate-item padd-15">
@@ -263,30 +263,30 @@ document.getElementById('contactForm').addEventListener('submit', function(event
             container.innerHTML += certItem;
         });
     }
-    
+
     function setupCertificatePagination() {
         const pagination = document.getElementById('certificate-pagination');
         pagination.innerHTML = '';
-    
+
         const totalPages = Math.ceil(certificates.length / itemsPerPageCertificates);
-    
+
         for (let i = 1; i <= totalPages; i++) {
             const button = document.createElement('button');
             button.innerText = i;
             button.classList.add('page-btn');
             if (i === currentPageCertificates) button.classList.add('active');
-    
+
             button.addEventListener('click', () => {
                 currentPageCertificates = i;
                 displayCertificates(currentPageCertificates);
                 setupCertificatePagination();
             });
-    
+
             pagination.appendChild(button);
         }
     }
-        
+
 
     displayCertificates(currentPageCertificates); // Ensure this matches the variable
-    setupCertificatePagination();       
+    setupCertificatePagination();
 })();
