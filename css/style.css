@@ -466,20 +466,37 @@ h3.my-profession {
 }
 
 .about .about-content .skills .skill-item {
-    flex: 0 0 100%;
-    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 25px;
+    position: relative;
 }
 
 .about .about-content .skills .skill-item h5 {
-    line-height: 40px;
-    font-weight: 600;
     font-size: 20px;
+    font-weight: 600;
     color: var(--text-black-900);
     text-transform: capitalize;
 }
 
-.about .about-content .skills .skill-item p {
+.about .about-content .skills .skill-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about .about-content .skills .skill-details p {
+    margin: 0;
     color: var(--text-black-700);
+    flex: 1;
+}
+
+.about .about-content .skills .skill-details .skill-percent {
+    margin-left: 15px;
+    font-weight: 400;
+    color: var(--text-black-900);
+    white-space: nowrap;
 }
 
 .about .about-content .skills .skill-item .progress {
@@ -490,10 +507,6 @@ h3.my-profession {
     position: relative;
 }
 
-.about .about-content .skills .skill-item {
-    margin-bottom: 25px;
-}
-
 .about .about-content .skills .skill-item .progress .progress-in {
     position: absolute;
     left: 0;
@@ -501,15 +514,6 @@ h3.my-profession {
     height: 100%;
     border-radius: 4px;
     background-color: var(--skin-color);
-}
-
-.about .about-content .skills .skill-item .skill-percent {
-    position: absolute;
-    right: 0;
-    color: var(--text-black-900);
-    top: -40px;
-    font-weight: 400;
-    line-height: 40px;
 }
 
 .about .about-content .education,
@@ -629,6 +633,7 @@ h3.my-profession {
     color: var(--skin-color);
     margin-bottom: 10px;
     font-size: 20px;
+    text-align: center;
 }
 
 .tool-item {
@@ -1118,10 +1123,12 @@ h3.my-profession {
     .portfolio .portfolio-item,
     .certificates .certificate-item,
     .service .service-item,
+    .tool-category,
     .about .about-content .education,
     .about .about-content .experience,
     .about .about-content .skills,
-    .about .about-content .personal-info {
+    .about .about-content .personal-info,
+    .about .about-content .personal-info .info-item {
         flex: 0 0 100%;
         max-width: 100%;
     }
