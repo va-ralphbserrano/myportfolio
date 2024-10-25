@@ -1098,6 +1098,7 @@ h3.my-profession {
 
 @media (max-width: 991px) {
 
+    .tool-category,
     .contact .contact-info-item,
     .portfolio .portfolio-item,
     .certificates .certificate-item,
