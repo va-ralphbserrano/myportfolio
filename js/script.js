@@ -156,14 +156,14 @@ document.getElementById('contactForm').addEventListener('submit', function (even
 // Portfolio Section Logic
 (function () {
     const portfolioData = [
-        { img: 'images/portfolio/portfolio-1.png', title: 'Project 1', desc: 'My First Portfolio Design Using Wix' },
-        { img: 'images/portfolio/portfolio-2.png', title: 'Project 2', desc: 'My Second Portfolio Using Canva' },
-        { img: 'images/portfolio/portfolio-3.jpg', title: 'Project 3', desc: 'Graphic Design for Marketing' },
-        { img: 'images/portfolio/portfolio-4.jpg', title: 'Project 4', desc: 'E-commerce Website Development' },
-        { img: 'images/portfolio/portfolio-5.jpg', title: 'Project 5', desc: 'Video Editing for Promotional Content' },
-        { img: 'images/portfolio/portfolio-6.jpg', title: 'Project 6', desc: 'Mobile App UI/UX Design' },
-        { img: 'images/portfolio/portfolio-7.jpg', title: 'Project 7', desc: 'Logo Design' },
-        { img: 'images/portfolio/portfolio-8.jpg', title: 'Project 8', desc: 'Social Media Campaign' },
+        { img: 'images/portfolio/portfolio-1.png', href: 'https://ralphbserrano.wixsite.com/thrive', title: 'Project 1', desc: 'My First Portfolio Design Using Wix' },
+        { img: 'images/portfolio/portfolio-2.png', href: 'https://rbsthriveportfolio.my.canva.site/', title: 'Project 2', desc: 'My Second Portfolio Using Canva' },
+        { img: 'images/portfolio/portfolio-3.jpg', href: '#', title: 'Project 3', desc: 'Graphic Design for Marketing' },
+        { img: 'images/portfolio/portfolio-4.jpg', href: '#', title: 'Project 4', desc: 'E-commerce Website Development' },
+        { img: 'images/portfolio/portfolio-5.jpg', href: '#', title: 'Project 5', desc: 'Video Editing for Promotional Content' },
+        { img: 'images/portfolio/portfolio-6.jpg', href: '#', title: 'Project 6', desc: 'Mobile App UI/UX Design' },
+        { img: 'images/portfolio/portfolio-7.jpg', href: '#', title: 'Project 7', desc: 'Logo Design' },
+        { img: 'images/portfolio/portfolio-8.jpg', href: '#', title: 'Project 8', desc: 'Social Media Campaign' },
     ];
 
     const itemsPerPage = 6;
@@ -182,11 +182,13 @@ document.getElementById('contactForm').addEventListener('submit', function (even
                 <div class="portfolio-item padd-15">
                     <div class="portfolio-item-inner shadow-dark">
                         <div class="portfolio-img">
-                            <img src="${item.img}" alt="${item.title}">
-                            <div class="overlay">
-                                <h4>${item.title}</h4>
-                                <p>${item.desc}</p>
-                            </div>
+                            <a href="${item.href}" target="_blank">
+                                <img src="${item.img}" alt="${item.title}">
+                                <div class="overlay">
+                                    <h4>${item.title}</h4>
+                                    <p>${item.desc}</p>
+                                </div>
+                            </a>
                         </div>
                     </div>
                 </div>`;
