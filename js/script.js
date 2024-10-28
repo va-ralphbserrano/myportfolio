@@ -156,8 +156,8 @@ document.getElementById('contactForm').addEventListener('submit', function (even
 // Portfolio Section Logic
 (function () {
     const portfolioData = [
-        { img: 'images/portfolio/portfolio-1.jpg', title: 'Project 1', desc: 'Responsive Website Design' },
-        { img: 'images/portfolio/portfolio-2.jpg', title: 'Project 2', desc: 'JavaScript Web App Development' },
+        { img: 'images/portfolio/portfolio-1.png', title: 'Project 1', desc: 'My First Portfolio Design Using Wix' },
+        { img: 'images/portfolio/portfolio-2.png', title: 'Project 2', desc: 'My Second Portfolio Using Canva' },
         { img: 'images/portfolio/portfolio-3.jpg', title: 'Project 3', desc: 'Graphic Design for Marketing' },
         { img: 'images/portfolio/portfolio-4.jpg', title: 'Project 4', desc: 'E-commerce Website Development' },
         { img: 'images/portfolio/portfolio-5.jpg', title: 'Project 5', desc: 'Video Editing for Promotional Content' },
