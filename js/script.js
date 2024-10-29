@@ -254,11 +254,13 @@ document.getElementById('contactForm').addEventListener('submit', function (even
                 <div class="certificate-item padd-15">
                     <div class="certificate-item-inner shadow-dark">
                         <div class="certificate-img">
-                            <img src="${cert.src}" alt="${cert.title}">
-                            <div class="overlay">
+                            <a href="${cert.src}" target="_blank">
+                                <img src="${cert.src}" alt="${cert.title}">
+                                <div class="overlay">
                                 <h4>${cert.title}</h4>
                                 <p>${cert.description}</p>
-                            </div>
+                                </div>
+                            </a>
                         </div>
                     </div>
                 </div>`;
