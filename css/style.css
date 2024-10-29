@@ -1364,6 +1364,7 @@ h3.my-profession {
   }
 }
 
+/*************  ✨ Codeium Command 🌟  *************/
 @media (max-width: 991px) {
   .tool-category,
   .contact .contact-info-item,
@@ -1382,10 +1383,25 @@ h3.my-profession {
   .home .home-img {
     display: none;
   }
+
+  .contact .contact-form .col-6 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .contact .contact-form .col-6 button {
+    display: block;
+    width: 100%;
+    padding: 1.5rem;
+  }
+
+  .contact {
+    padding-bottom: 3rem;
+  }
 }
+/******  52588fd3-bf0f-4a23-a21a-3a6a08fe2640  *******/
 
 @media (max-width: 767px) {
-  .contact .contact-form .col-6,
   .contact .contact-info-item,
   .portfolio .portfolio-item,
   .certificates .certificate-item,
