@@ -304,6 +304,20 @@ ul {
   color: var(--skin-color);
 }
 
+.nav li a:hover:not(.active) i {
+  animation: bounce 0.5s ease-in-out infinite;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(3px);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+}
+
 .aside .nav li a i {
   margin-right: 15px;
 }
@@ -1137,5 +1151,22 @@ h3.my-profession {
   .about .about-content .personal-info .info-item {
     flex: 0 0 100%;
     max-width: 100%;
+  }
+}
+
+.nav li a i {
+  transition: transform 0.3s; /* Add transition for smooth animation */
+}
+
+.nav li a i.spin {
+  animation: spin 0.5s ease-in-out;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
