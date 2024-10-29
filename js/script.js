@@ -396,3 +396,13 @@ var age = Math.floor((today - birthDate) / (1000 * 60 * 60 * 24 * 365.25));
  */
 ageSpan.textContent = age;
 
+
+window.addEventListener('load', function() {
+  const preloader = document.getElementById('preloader');
+  setTimeout(function() {
+    preloader.style.opacity = '0';
+    preloader.addEventListener('transitionend', function() {
+      preloader.style.display = 'none';
+    }, { once: true });
+  }, 3000);
+});
