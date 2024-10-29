@@ -397,15 +397,46 @@ var age = Math.floor((today - birthDate) / (1000 * 60 * 60 * 24 * 365.25));
 ageSpan.textContent = age;
 
 
+/**
+ * Hides the preloader element after the page has finished loading.
+ *
+ * Waits for 3 seconds after the page has finished loading before hiding the preloader.
+ * This is done to ensure that the preloader is visible long enough to provide a good user experience.
+ */
 window.addEventListener('load', function() {
+  /**
+   * The preloader element.
+   * @type {HTMLElement}
+   */
   const preloader = document.getElementById('preloader');
+
+  /**
+   * The timeout for hiding the preloader.
+   * @type {number}
+   */
+  const timeout = 3000;
+
+  /**
+   * Hides the preloader element after the timeout has expired.
+   */
   setTimeout(function() {
+    /**
+     * Set the opacity of the preloader to 0, which makes it invisible.
+     * Also set the pointer-events CSS property to 'none' to prevent any mouse events from being triggered.
+     */
     preloader.style.opacity = '0';
     preloader.style.pointerEvents = 'none';
+
+    /**
+     * Listen for the transitionend event on the preloader element.
+     * When the event is triggered, set the display property of the preloader to 'none' to hide it completely.
+     * Also set the pointer-events property to 'auto' to allow mouse events to be triggered again.
+     */
     preloader.addEventListener('transitionend', function() {
       preloader.style.display = 'none';
       preloader.style.pointerEvents = 'auto';
     }, { once: true });
-  }, 3000);
+  }, timeout);
 });
+
 
