@@ -298,13 +298,13 @@ document.getElementById('contactForm').addEventListener('submit', function (even
 const navLinkss = document.querySelectorAll('.nav li a');
 
 navLinkss.forEach(link => {
-  link.addEventListener('click', () => {
-    const icon = link.querySelector('i');
-    icon.classList.add('spin');
+    link.addEventListener('click', () => {
+        const icon = link.querySelector('i');
+        icon.classList.add('spin');
 
-    // Remove the 'spin' class after the animation completes
-    setTimeout(() => {
-      icon.classList.remove('spin');
-    }, 500); // Adjust the timeout to match the animation duration
-  });
+        // Remove the 'spin' class after the animation completes
+        setTimeout(() => {
+            icon.classList.remove('spin');
+        }, 500); // Adjust the timeout to match the animation duration
+    });
 });
