@@ -1432,28 +1432,90 @@ h3.my-profession {
   }
 }
 
+/**
+ * Preloader styles
+ * 
+ * Styles for the preloader element which displays during page load.
+ * The preloader is a full-screen overlay with a pulsing text element
+ * that displays the text "LOADING".
+ */
+
 #preloader {
+  /**
+   * Position the preloader absolutely at the top left of the viewport
+   */
   position: fixed;
   top: 0;
   left: 0;
+
+  /**
+   * Set the background color to a dark shade of the primary color
+   */
+  background-color: #333;
+
+  /**
+   * Set the width and height of the preloader to 100% of the viewport
+   */
   width: 100%;
   height: 100%;
-  background-color: #333; /* Dark shade of primary color */
+
+  /**
+   * Set the z-index of the preloader to 9999 to ensure it appears on top of all other elements
+   */
   z-index: 9999;
+
+  /**
+   * Set the display to flex and center the content both horizontally and vertically
+   */
   display: flex;
   justify-content: center;
   align-items: center;
+
+  /**
+   * Set the font family to Arial, sans-serif
+   */
   font-family: Arial, sans-serif;
 }
 
+/**
+ * Loading text styles
+ * 
+ * Styles for the loading text element which is displayed inside the preloader.
+ * The loading text is a large, bold, and pulsing text element that displays the text "LOADING"
+ */
+
 .loading-text {
+  /**
+   * Set the font size to 48px
+   */
   font-size: 48px;
+
+  /**
+   * Set the letter spacing to 15px
+   */
   letter-spacing: 15px;
+
+  /**
+   * Set the font weight to bold
+   */
   font-weight: bold;
-  color: #ff7f00; /* Primary color */
+
+  /**
+   * Set the color of the loading text to the primary color
+   */
+  color: #ff7f00;
+
+  /**
+   * Apply the pulse animation to the loading text
+   */
   animation: pulse 2s ease-in-out infinite;
 }
 
+/**
+ * Pulse animation
+ * 
+ * Animation that makes the loading text pulse in and out
+ */
 @keyframes pulse {
   0% {
     opacity: 1;
@@ -1465,6 +1527,12 @@ h3.my-profession {
     opacity: 1;
   }
 }
+
+/**
+ * Responsive styles for the preloader
+ * 
+ * Adjust the font size and letter spacing of the loading text based on the screen size
+ */
 
 @media (max-width: 767px) {
   .loading-text {
