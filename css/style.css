@@ -1,13 +1,29 @@
+/**
+ * Global styles
+ */
 @import url("https://fonts.googleapis.com/css2?family=Clicker+Script&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
+/**
+ * Global variables
+ */
 :root {
+  /**
+   * Background colors
+   */
   --bg-black-900: #f2f2fc;
   --bg-black-100: #fdf9ff;
   --bg-black-50: #e8dfec;
+
+  /**
+   * Text colors
+   */
   --text-black-900: #302e4d;
   --text-black-700: #504e70;
 }
 
+/**
+ * Dark mode
+ */
 body.dark {
   --bg-black-900: #151515;
   --bg-black-100: #222222;
@@ -16,12 +32,18 @@ body.dark {
   --text-black-700: #e9e9e9;
 }
 
+/**
+ * Global styles
+ */
 body {
   line-height: 1.5;
   font-size: 16px;
   font-family: "Poppins" sans-serif;
 }
 
+/**
+ * Remove default styles
+ */
 * {
   margin: 0;
   padding: 0;
@@ -30,15 +52,24 @@ body {
   box-sizing: border-box;
 }
 
+/**
+ * Set box-sizing to border-box for all pseudo elements
+ */
 ::before,
 ::after {
   box-sizing: border-box;
 }
 
+/**
+ * Remove default list style
+ */
 ul {
   list-style-type: none;
 }
 
+/**
+ * Section styles
+ */
 .section {
   background-color: var(--bg-black-900);
   min-height: 100vh;
@@ -66,6 +97,9 @@ ul {
   animation: slideSection 1s ease;
 }
 
+/**
+ * Animation for section
+ */
 @keyframes slideSection {
   0% {
     transform: translateX(100%);
@@ -76,6 +110,9 @@ ul {
   }
 }
 
+/**
+ * Hide element
+ */
 .hidden {
   display: none !important;
 }
@@ -159,7 +196,11 @@ ul {
   box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
 }
 
-/* ASIDE */
+/**
+ * ASIDE
+ *
+ * This is the aside section which contains the logo, navigation menu and toggler.
+ */
 .aside {
   width: 270px;
   background-color: var(--bg-black-100);
@@ -176,6 +217,11 @@ ul {
   transition: all 0.3s ease;
 }
 
+/**
+ * LOGO
+ *
+ * This is the logo section which contains the logo and the link to the home page.
+ */
 .aside .logo {
   position: absolute;
   top: 50px;
@@ -219,6 +265,11 @@ ul {
   right: 0;
 }
 
+/**
+ * NAV TOGGLER
+ *
+ * This is the navigation toggler which is used to toggle the navigation menu.
+ */
 .aside .nav-toggler {
   height: 40px;
   width: 45px;
@@ -277,6 +328,11 @@ ul {
   top: 0;
 }
 
+/**
+ * NAVIGATION MENU
+ *
+ * This is the navigation menu which is used to navigate to different sections of the page.
+ */
 .aside .nav {
   margin-top: 50px;
 }
@@ -321,30 +377,46 @@ ul {
 .aside .nav li a i {
   margin-right: 15px;
 }
-
 /* HOME */
+
+/**
+ * This section contains the home page information.
+ * It includes the navigation menu, the home text, and the home image.
+ */
 .home {
   min-height: 100vh;
   display: flex;
   color: var(--text-black-900);
 }
 
+/**
+ * This flex container contains the home text and image.
+ */
 .home .home-info {
   flex: 0 0 60%;
   max-width: 60%;
 }
 
+/**
+ * This sets the font size for the home page title.
+ */
 h1 {
   font-size: 35px;
   margin: 15px 0;
   color: var(--skin-color);
 }
 
+/**
+ * This sets the font size for the hello and my profession text.
+ */
 h3.hello {
   font-size: 28px;
   margin: 15px 0;
 }
 
+/**
+ * This sets the font family, font size, and color for the hello text.
+ */
 h3.hello span {
   font-family: "Clicker Script", cursive;
   font-size: 40px;
@@ -352,15 +424,24 @@ h3.hello span {
   color: var(--skin-color);
 }
 
+/**
+ * This sets the font size for the my profession text.
+ */
 h3.my-profession {
   font-size: 30px;
   margin: 15px 0;
 }
 
+/**
+ * This sets the color for the typing animation.
+ */
 .typing {
   color: var(--skin-color);
 }
 
+/**
+ * This sets the font size and color for the home text.
+ */
 .home-info p {
   margin-bottom: 70px;
   font-size: 20px;
@@ -368,6 +449,9 @@ h3.my-profession {
   color: var(--text-black-700);
 }
 
+/**
+ * This flex container contains the home image.
+ */
 .home .home-img {
   flex: 0 0 40%;
   max-width: 40%;
@@ -375,6 +459,9 @@ h3.my-profession {
   position: relative;
 }
 
+/**
+ * This adds a border around the home image.
+ */
 .home-img::after,
 .home-img::before {
   content: "";
@@ -383,6 +470,9 @@ h3.my-profession {
   width: 80px;
 }
 
+/**
+ * This sets the border bottom and right for the home image.
+ */
 .home-img::after {
   border-bottom: 10px solid var(--skin-color);
   border-right: 10px solid var(--skin-color);
@@ -390,6 +480,9 @@ h3.my-profession {
   right: -20px;
 }
 
+/**
+ * This sets the border top and left for the home image.
+ */
 .home-img::before {
   border-top: 10px solid var(--skin-color);
   border-left: 10px solid var(--skin-color);
@@ -397,23 +490,37 @@ h3.my-profession {
   left: -5px;
 }
 
+/**
+ * This sets the width and height for the home image.
+ */
 .home .home-img img {
   margin: auto;
   border-radius: 5px;
   height: 400px;
 }
 
-/* ABOUT */
+/* ABOUT SECTION */
+
+/**
+ * This section contains the about page content.
+ * It includes about text, personal info, and skills.
+ */
 .about .about-content {
   flex: 0 0 100%;
   max-width: 100%;
 }
 
+/**
+ * This section contains the about text.
+ */
 .about .about-content .about-text {
   flex: 0 0 100%;
   max-width: 100%;
 }
 
+/**
+ * This sets the font size, margin, weight, and color for the about text heading.
+ */
 .about .about-content .about-text h3 {
   font-size: 24px;
   margin-bottom: 15px;
@@ -421,10 +528,16 @@ h3.my-profession {
   color: var(--text-black-900);
 }
 
+/**
+ * This sets the color for the highlighted text in the about heading.
+ */
 .about .about-content .about-text h3 span {
   color: var(--skin-color);
 }
 
+/**
+ * This sets the font size, line height, and color for the about text paragraphs.
+ */
 .about .about-content .about-text p {
   font-size: 16px;
   line-height: 25px;
@@ -434,17 +547,26 @@ h3.my-profession {
   color: var(--text-black-700);
 }
 
+/**
+ * This section contains personal information.
+ */
 .about .about-content .personal-info {
   flex: 0 0 60%;
   max-width: 60%;
   margin-top: 40px;
 }
 
+/**
+ * This sets the layout for each personal information item.
+ */
 .about .about-content .personal-info .info-item {
   flex: 0 0 50%;
   max-width: 50%;
 }
 
+/**
+ * This sets the font weight, padding, and color for personal information paragraphs.
+ */
 .about .about-content .personal-info .info-item p {
   font-weight: 600;
   padding: 10px 0;
@@ -453,6 +575,9 @@ h3.my-profession {
   border-bottom: 1px solid var(--bg-black-50);
 }
 
+/**
+ * This sets the font weight and color for span elements within personal info items.
+ */
 .about .about-content .personal-info .info-item p span {
   font-weight: 400;
   color: var(--text-black-700);
@@ -460,30 +585,48 @@ h3.my-profession {
   display: inline-block;
 }
 
+/**
+ * This sets the appearance and transition effect for links in info items.
+ */
 .info-item a {
   text-decoration: none;
   color: var(--text-black-700);
   transition: color 0.3s ease;
 }
 
+/**
+ * This sets the hover effect for links in info items.
+ */
 .info-item a:hover {
   color: var(--skin-color);
 }
 
+/**
+ * This section contains the action buttons.
+ */
 .about .about-content .personal-info .buttons {
   margin-top: 30px;
 }
 
+/**
+ * This sets the margin for buttons within the personal info section.
+ */
 .about .about-content .personal-info .buttons .btn {
   margin-top: 10px;
 }
 
+/**
+ * This section contains the skills information.
+ */
 .about .about-content .skills {
   flex: 0 0 40%;
   max-width: 40%;
   margin-top: 40px;
 }
 
+/**
+ * This sets the layout and positioning for each skill item.
+ */
 .about .about-content .skills .skill-item {
   display: flex;
   flex-direction: column;
@@ -492,6 +635,9 @@ h3.my-profession {
   position: relative;
 }
 
+/**
+ * This sets the font size, weight, and color for skill item headings.
+ */
 .about .about-content .skills .skill-item h5 {
   font-size: 20px;
   font-weight: 600;
@@ -499,18 +645,26 @@ h3.my-profession {
   text-transform: capitalize;
 }
 
+/**
+ * This sets the layout for skill details, aligning items and spacing.
+ */
 .about .about-content .skills .skill-details {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-
+/**
+ * Styles for skill details paragraph.
+ */
 .about .about-content .skills .skill-details p {
   margin: 0;
   color: var(--text-black-700);
   flex: 1;
 }
 
+/**
+ * Styles for skill percentage display.
+ */
 .about .about-content .skills .skill-details .skill-percent {
   margin-left: 15px;
   font-weight: 400;
@@ -518,6 +672,9 @@ h3.my-profession {
   white-space: nowrap;
 }
 
+/**
+ * Styles for progress bar container.
+ */
 .about .about-content .skills .skill-item .progress {
   background-color: var(--bg-black-50);
   height: 7px;
@@ -526,6 +683,9 @@ h3.my-profession {
   position: relative;
 }
 
+/**
+ * Styles for progress indicator.
+ */
 .about .about-content .skills .skill-item .progress .progress-in {
   position: absolute;
   left: 0;
@@ -535,6 +695,9 @@ h3.my-profession {
   background-color: var(--skin-color);
 }
 
+/**
+ * Layout for education and experience sections.
+ */
 .about .about-content .education,
 .about .about-content .experience {
   flex: 0 0 50%;
@@ -542,6 +705,9 @@ h3.my-profession {
   margin-top: 30px;
 }
 
+/**
+ * Styles for section titles.
+ */
 .about .about-content h3.title {
   font-size: 24px;
   margin-bottom: 30px;
@@ -549,11 +715,17 @@ h3.my-profession {
   color: var(--text-black-900);
 }
 
+/**
+ * Layout for timeline box.
+ */
 .about .about-content .timeline-box {
   flex: 0 0 100%;
   max-width: 100%;
 }
 
+/**
+ * Styles for timeline container.
+ */
 .about .about-content .timeline {
   background-color: var(--bg-black-100);
   padding: 30px 15px;
@@ -563,16 +735,25 @@ h3.my-profession {
   position: relative;
 }
 
+/**
+ * Layout and positioning for timeline items.
+ */
 .about .about-content .timeline .timeline-item {
   position: relative;
   padding-left: 37px;
   padding-bottom: 50px;
 }
 
+/**
+ * Adjust padding for the last timeline item.
+ */
 .about .about-content .timeline .timeline-item:last-child {
   padding-bottom: 15px;
 }
 
+/**
+ * Vertical line for timeline items.
+ */
 .about .about-content .timeline .timeline-item::before {
   content: "";
   width: 1px;
@@ -583,6 +764,9 @@ h3.my-profession {
   background-color: var(--skin-color);
 }
 
+/**
+ * Styles for timeline indicator dot.
+ */
 .about .about-content .timeline .circle-dot {
   position: absolute;
   left: 0;
@@ -593,6 +777,9 @@ h3.my-profession {
   background-color: var(--skin-color);
 }
 
+/**
+ * Styles for timeline date text.
+ */
 .about .about-content .timeline .timeline-date {
   font-weight: 400;
   font-size: 14px;
@@ -600,10 +787,16 @@ h3.my-profession {
   color: var(--text-black-700);
 }
 
+/**
+ * Icon margin for timeline date.
+ */
 .about .about-content .timeline .timeline-date .fa {
   margin-right: 5px;
 }
 
+/**
+ * Styles for timeline title.
+ */
 .about .about-content .timeline .timeline-title {
   font-weight: 700;
   font-size: 18px;
@@ -613,6 +806,9 @@ h3.my-profession {
   border-bottom: 1px solid var(--bg-black-50);
 }
 
+/**
+ * Styles for timeline text.
+ */
 .about .about-content .timeline .timeline-text {
   line-height: 25px;
   font-size: 16px;
@@ -621,10 +817,16 @@ h3.my-profession {
   color: var(--text-black-700);
 }
 
+/**
+ * Margin for tools section.
+ */
 .tools {
   margin-top: 40px;
 }
 
+/**
+ * Styles for tools section title.
+ */
 .tools .title {
   font-size: 24px;
   font-weight: 700;
@@ -632,12 +834,18 @@ h3.my-profession {
   margin-bottom: 20px;
 }
 
+/**
+ * Layout for tool container.
+ */
 .tool-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
 
+/**
+ * Styles for tool category section.
+ */
 .tool-category {
   flex: 1 1 33.33%;
   max-width: 33.33%;
@@ -649,6 +857,9 @@ h3.my-profession {
   position: relative;
 }
 
+/**
+ * Styles for tool category title.
+ */
 .tool-category h4 {
   font-weight: 600;
   color: var(--skin-color);
@@ -657,33 +868,49 @@ h3.my-profession {
   text-align: center;
 }
 
+/**
+ * Layout for tool items.
+ */
 .tool-item {
   display: flex;
   align-items: center;
   margin-bottom: 10px;
 }
 
+/**
+ * Styles for tool item icons.
+ */
 .tool-item i {
   margin-right: 10px;
   color: var(--skin-color);
 }
 
+/**
+ * Styles for tool item text.
+ */
 .tool-item span {
   font-size: 16px;
   color: var(--text-black-700);
 }
-
-/* SERVICES */
+/**
+ * Styles for service section.
+ */
 .service .container {
   padding-bottom: 40px;
 }
 
+/**
+ * Styles for service items.
+ */
 .service .service-item {
   margin-bottom: 30px;
   flex: 0 0 33.33%;
   max-width: 33.33%;
 }
 
+/**
+ * Styles for service item inner section.
+ */
 .service .service-item .service-item-inner {
   background: var(--bg-black-100);
   border: 1px solid var(--bg-black-50);
@@ -694,10 +921,16 @@ h3.my-profession {
   transition: all 0.35s ease;
 }
 
+/**
+ * Styles for service item inner on hover.
+ */
 .service .service-item .service-item-inner:hover {
   box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
 }
 
+/**
+ * Styles for service item icon.
+ */
 .service .service-item .service-item-inner .icon {
   height: 60px;
   width: 60px;
@@ -708,6 +941,9 @@ h3.my-profession {
   transition: all 0.3s ease;
 }
 
+/**
+ * Styles for service item icon on hover.
+ */
 .service .service-item .service-item-inner .icon .fa {
   font-size: 40px;
   line-height: 60px;
@@ -715,15 +951,24 @@ h3.my-profession {
   transition: all 0.3s ease;
 }
 
+/**
+ * Styles for service item icon on hover.
+ */
 .service .service-item .service-item-inner:hover .icon {
   background: var(--skin-color);
 }
 
+/**
+ * Styles for service item icon on hover.
+ */
 .service .service-item .service-item-inner:hover .icon .fa {
   font-size: 25px;
   color: #ffffff;
 }
 
+/**
+ * Styles for service item title.
+ */
 .service .service-item .service-item-inner h4 {
   font-size: 18px;
   margin-bottom: 15px;
@@ -732,12 +977,14 @@ h3.my-profession {
   text-transform: capitalize;
 }
 
+/**
+ * Styles for service item text.
+ */
 .service .service-item .service-item-inner p {
   font-size: 16px;
   color: var(--text-black-700);
   line-height: 25px;
 }
-
 /* PORTFOLIO */
 .portfolio .container {
   padding-bottom: 40px;

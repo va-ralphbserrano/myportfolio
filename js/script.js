@@ -1,4 +1,9 @@
-// Function to Initialize Typing Animations Dynamically
+/**
+ * Function to Initialize Typing Animations Dynamically
+ *
+ * @param {string} selector The element selector for the typing animation
+ * @param {string[]} strings The array of strings to type
+ */
 function initTypingAnimation(selector, strings) {
     if (document.querySelector(selector)) {
         new Typed(selector, {
@@ -19,6 +24,14 @@ initTypingAnimation(".home .typing", [
     "Virtual Assistant"
 ]);
 
+/**
+ * Initialize Typing Animation for About Section
+ *
+ * This function takes an array of strings and creates a typing animation
+ * in the about section of the page.
+ *
+ * @param {string[]} strings The array of strings to type
+ */
 initTypingAnimation(".about-text .typing", [
     "AutoCAD Designer",
     "Web Designer",
@@ -27,40 +40,58 @@ initTypingAnimation(".about-text .typing", [
     "Virtual Assistant"
 ]);
 
-/* Aside Navigation */
+/**
+ * Get the aside navigation element
+ */
 const nav = document.querySelector(".nav"),
     navLinks = nav.querySelectorAll("li a"),
     allSections = document.querySelectorAll(".section"),
     navTogglerBtn = document.querySelector(".nav-toggler"),
     aside = document.querySelector(".aside");
 
+/**
+ * The total number of navigation links
+ */
 let totalNavLinks = navLinks.length,
     totalSections = allSections.length;
 
-// Helper: Remove all back-sections
+/**
+ * Helper function to remove all back-sections
+ */
 function removeBackSection() {
     allSections.forEach(section => section.classList.remove("back-section"));
 }
 
-// Helper: Add back-section to a specific section by index
+/**
+ * Helper function to add back-section to a specific section by index
+ * @param {number} index The index of the section
+ */
 function addBackSection(index) {
     allSections[index].classList.add("back-section");
 }
 
-// Helper: Show the selected section based on the clicked link
+/**
+ * Helper function to show the selected section based on the clicked link
+ * @param {Element} element The clicked link element
+ */
 function showSection(element) {
     allSections.forEach(section => section.classList.remove("active"));
     const targetID = element.getAttribute("href").split("#")[1];
     document.querySelector(`#${targetID}`).classList.add("active");
 }
 
-// Helper: Update active state of navigation links
+/**
+ * Helper function to update active state of navigation links
+ * @param {Element} element The clicked link element
+ */
 function updateNav(element) {
     navLinks.forEach(link => link.classList.remove("active"));
     element.classList.add("active");
 }
 
-// Handle navigation clicks
+/**
+ * Handle navigation clicks
+ */
 navLinks.forEach((link, index) => {
     link.addEventListener("click", function () {
         const currentActiveIndex = [...navLinks].findIndex(link =>
@@ -82,7 +113,9 @@ navLinks.forEach((link, index) => {
     });
 });
 
-// Handle "Hire Me" button click
+/**
+ * Handle "Hire Me" button click
+ */
 document.querySelector(".hire-me").addEventListener("click", function () {
     const sectionIndex = parseInt(this.getAttribute("data-section-index"), 10);
 
@@ -93,7 +126,9 @@ document.querySelector(".hire-me").addEventListener("click", function () {
     updateNav(document.querySelector('a[href="#contact"]'));  // Update active nav link
 });
 
-// Handle logo click event to navigate to home section
+/**
+ * Handle logo click event to navigate to home section
+ */
 document.getElementById("logo").addEventListener("click", function (event) {
     event.preventDefault(); // Prevent the default anchor behavior
     const homeLink = document.querySelector('a[href="#home"]'); // Select the home link
@@ -108,22 +143,38 @@ document.getElementById("logo").addEventListener("click", function (event) {
     }
 });
 
-// Toggle aside menu on small screens
+/**
+ * Toggle aside menu on small screens
+ */
 navTogglerBtn.addEventListener("click", toggleAside);
 
+/**
+ * Toggle the aside navigation
+ */
 function toggleAside() {
     aside.classList.toggle("open");
     navTogglerBtn.classList.toggle("open");
     allSections.forEach(section => section.classList.toggle("open"));
 }
 
-// Contact Form Submission
+/**
+ * Contact Form Submission
+ * Listens for form submission event on the contact form and sends the form data
+ * to the server using the Fetch API. If the response is successful, it clears
+ * the form fields and alerts the user. If there is an error, it logs the error
+ * and alerts the user. It also handles the case where the form is invalid.
+ */
 document.getElementById('contactForm').addEventListener('submit', function (event) {
     event.preventDefault(); // Prevent the default form submission
     const submitButton = this.querySelector('button[type="submit"]');
     submitButton.disabled = true; // Disable button during submission
     submitButton.textContent = 'Sending...'; // Provide feedback to the user
 
+    /**
+     * Check if the form is valid and send the form data to the server.
+     * If the response is successful, clear the form fields and alert the user.
+     * If there is an error, log the error and alert the user.
+     */
     if (this.checkValidity()) {
         fetch(this.action, {
             method: this.method,
@@ -154,6 +205,7 @@ document.getElementById('contactForm').addEventListener('submit', function (even
 });
 
 // Portfolio Section Logic
+// This script is responsible for displaying the portfolio items and setting up the pagination
 (function () {
     const portfolioData = [
         { img: 'images/portfolio/portfolio-1.png', href: 'https://ralphbserrano.wixsite.com/thrive', title: 'Project 1', desc: 'My First Portfolio Design Using Wix' },
@@ -169,6 +221,10 @@ document.getElementById('contactForm').addEventListener('submit', function (even
     const itemsPerPage = 6;
     let currentPage = 1;
 
+    /**
+     * Displays the portfolio items based on the current page
+     * @param {number} page The current page number
+     */
     function displayPortfolioItems(page) {
         const startIndex = (page - 1) * itemsPerPage;
         const endIndex = startIndex + itemsPerPage;
@@ -196,6 +252,9 @@ document.getElementById('contactForm').addEventListener('submit', function (even
         });
     }
 
+    /**
+     * Sets up the pagination buttons
+     */
     function setupPagination() {
         const totalPages = Math.ceil(portfolioData.length / itemsPerPage);
         const paginationContainer = document.getElementById('pagination');
@@ -222,6 +281,7 @@ document.getElementById('contactForm').addEventListener('submit', function (even
 })();
 
 // Certificates Section Logic
+// This script is responsible for displaying the certificates and setting up the pagination
 (function () {
     const certificates = [
         { src: "images/certificate/Apprenticeship Certificate.png", title: "Executive Assistant Apprenticeship", description: "Surge Freelancing Marketplace, 2024" },
@@ -234,6 +294,10 @@ document.getElementById('contactForm').addEventListener('submit', function (even
     ];
     const itemsPerPageCertificates = 6;
     let currentPageCertificates = 1;
+    /**
+     * Displays the certificates based on the current page
+     * @param {number} page The current page number
+     */
     function displayCertificates(page) {
         const container = document.getElementById('certificates-container');
         container.innerHTML = '';
@@ -261,6 +325,9 @@ document.getElementById('contactForm').addEventListener('submit', function (even
         });
     }
 
+    /**
+     * Sets up the pagination buttons
+     */
     function setupCertificatePagination() {
         const pagination = document.getElementById('certificate-pagination');
         pagination.innerHTML = '';
@@ -301,3 +368,31 @@ navLinkss.forEach(link => {
         }, 500); // Adjust the timeout to match the animation duration
     });
 });
+
+/**
+ * Calculates the age based on the birth date and displays it in the #age span.
+ */
+var ageSpan = document.getElementById("age");
+
+/**
+ * The birth date of the person.
+ * @type {Date}
+ */
+var birthDate = new Date("1987-06-18");
+/**
+ * The current date and time.
+ * @type {Date}
+ */
+var today = new Date();
+
+/**
+ * Calculates the age in years based on the difference between the current date and the birth date.
+ * @returns {number} The age in years.
+ */
+var age = Math.floor((today - birthDate) / (1000 * 60 * 60 * 24 * 365.25));
+
+/**
+ * Sets the text content of the #age span to the calculated age.
+ */
+ageSpan.textContent = age;
+
