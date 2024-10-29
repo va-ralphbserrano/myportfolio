@@ -401,8 +401,11 @@ window.addEventListener('load', function() {
   const preloader = document.getElementById('preloader');
   setTimeout(function() {
     preloader.style.opacity = '0';
+    preloader.style.pointerEvents = 'none';
     preloader.addEventListener('transitionend', function() {
       preloader.style.display = 'none';
+      preloader.style.pointerEvents = 'auto';
     }, { once: true });
   }, 3000);
 });
+
