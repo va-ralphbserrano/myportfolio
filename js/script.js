@@ -232,13 +232,6 @@ document.getElementById('contactForm').addEventListener('submit', function (even
         { src: "images/certificate/Content Marketing Strategy in social media.png", title: "Content Marketing Strategy", description: "Surge Freelancing Marketplace, 2024" },
         { src: "images/certificate/AnotherCertificate.jpg", title: "Another Certificate", description: "Another Place, 2024" },
     ];
-
-    const itemsPerPage = 6;
-    let currentPage = 1;
-
-    const itemsPerPagePortfolio = 6;
-    let currentPagePortfolio = 1;
-
     const itemsPerPageCertificates = 6;
     let currentPageCertificates = 1;
     function displayCertificates(page) {
