@@ -1451,3 +1451,17 @@ h3.my-profession {
     opacity: 1;
   }
 }
+
+@media (max-width: 767px) {
+  .loading-text {
+    font-size: 32px;
+    letter-spacing: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .loading-text {
+    font-size: 24px;
+    letter-spacing: 5px;
+  }
+}
