@@ -386,7 +386,7 @@ h3.my-profession {
 .home-img::after {
   border-bottom: 10px solid var(--skin-color);
   border-right: 10px solid var(--skin-color);
-  bottom: -20px;
+  bottom: 90px;
   right: -20px;
 }
 
@@ -394,7 +394,7 @@ h3.my-profession {
   border-top: 10px solid var(--skin-color);
   border-left: 10px solid var(--skin-color);
   top: -20px;
-  left: -20px;
+  left: -5px;
 }
 
 .home .home-img img {
