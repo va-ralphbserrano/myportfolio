@@ -1769,3 +1769,46 @@ footer a i:hover {
      */
   padding-bottom: 55px;
 }
+
+@media (max-height: 550px) {
+  .aside .logo {
+    top: 10px;
+  }
+
+  .nav-toggler {
+    top: 15px;
+  }
+
+  .aside .nav li a {
+    font-size: 10px;
+  }
+
+  .aside .nav li a::before {
+    bottom: 5px;
+  }
+}
+
+/**
+ * Responsive styles for the footer
+ */
+@media (max-width: 1199px) {
+  footer {
+    text-align: center;
+  }
+  
+  footer ul {
+    margin-top: 10px;
+  }
+
+  footer ul li {
+    margin: 0 5px;
+  }
+
+  footer a i {
+    font-size: 14px;
+  }
+
+  .section {
+    padding-bottom: 100px;
+  }
+}
