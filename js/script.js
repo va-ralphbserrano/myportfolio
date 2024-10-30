@@ -208,15 +208,22 @@ document.getElementById('contactForm').addEventListener('submit', function (even
 // This script is responsible for displaying the portfolio items and setting up the pagination
 (function () {
     const portfolioData = [
-        { img: 'images/portfolio/portfolio-1.png', href: 'https://ralphbserrano.wixsite.com/thrive', title: 'Project 1', desc: 'My First Portfolio Design Using Wix' },
-        { img: 'images/portfolio/portfolio-2.png', href: 'https://rbsthriveportfolio.my.canva.site/', title: 'Project 2', desc: 'My Second Portfolio Using Canva' },
-        { img: 'images/portfolio/portfolio-3.jpg', href: '#', title: 'Project 3', desc: 'Graphic Design for Marketing' },
-        { img: 'images/portfolio/portfolio-4.jpg', href: '#', title: 'Project 4', desc: 'E-commerce Website Development' },
-        { img: 'images/portfolio/portfolio-5.jpg', href: '#', title: 'Project 5', desc: 'Video Editing for Promotional Content' },
-        { img: 'images/portfolio/portfolio-6.jpg', href: '#', title: 'Project 6', desc: 'Mobile App UI/UX Design' },
-        { img: 'images/portfolio/portfolio-7.jpg', href: '#', title: 'Project 7', desc: 'Logo Design' },
-        { img: 'images/portfolio/portfolio-8.jpg', href: '#', title: 'Project 8', desc: 'Social Media Campaign' },
+        { img: 'images/portfolio/portfolio-1.png', href: 'https://ralphbserrano.wixsite.com/thrive', title: 'Project', desc: 'My First Portfolio Design Using Wix' },
+        { img: 'images/portfolio/portfolio-2.png', href: 'https://rbsthriveportfolio.my.canva.site/', title: 'Project', desc: 'My Second Portfolio Using Canva' },
+        { img: 'images/portfolio/portfolio-3.png', href: 'https://jbyissbfb.wixsite.com/jbyiss', title: 'Project', desc: 'Website Created Using Wix' },
+        { img: 'images/portfolio/portfolio-4.png', href: 'https://drive.google.com/drive/folders/1t1Sqg93MnBAAawg3LchpzNKHMdmXc2uM?usp=sharing', title: 'Project', desc: 'Email Management' },
+        { img: 'images/portfolio/portfolio-5.png', href: 'https://drive.google.com/drive/folders/1Fh69DgwzEqQnxiKRVe1tcVdGDdqC3Ue0?usp=sharing', title: 'Project', desc: 'Trello/Project Management' },
+        { img: 'images/portfolio/portfolio-6.png', href: 'https://drive.google.com/drive/folders/1XEGWaVMGvh1O-NnxmJydV0KIOsChHlLm?usp=sharing', title: 'Project', desc: 'Travel/Calendar Management and Appointment Setting' },
+        { img: 'images/portfolio/portfolio-7.png', href: 'https://drive.google.com/drive/folders/19x3cIw20fqqhX73ZV83eEMueysmgswBK?usp=sharing', title: 'Project', desc: 'Content Creation' },
+        { img: 'images/portfolio/portfolio-8.png', href: 'https://drive.google.com/drive/folders/1vr3zsSHroynxjWyIkpqRSlt1raSJSFg-?usp=sharing', title: 'Project', desc: 'Apprenticeship Program' },
+        { img: 'images/portfolio/portfolio-9.png', href: 'https://drive.google.com/drive/folders/10vyiRW-F4qs1tsydPxiHhHpWJbEHxfDH?usp=sharing', title: 'Project', desc: 'MVA Class Course' },
     ];
+
+    // Randomize the portfolio items
+    for (let i = portfolioData.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [portfolioData[i], portfolioData[j]] = [portfolioData[j], portfolioData[i]];
+    }
 
     const itemsPerPage = 6;
     let currentPage = 1;
@@ -229,7 +236,7 @@ document.getElementById('contactForm').addEventListener('submit', function (even
         const startIndex = (page - 1) * itemsPerPage;
         const endIndex = startIndex + itemsPerPage;
         const itemsToDisplay = portfolioData.slice(startIndex, endIndex);
-
+        var portfolioTitleNum = (page - 1) * itemsPerPage + 1;
         const portfolioContainer = document.getElementById('portfolioItems');
         portfolioContainer.innerHTML = '';
 
@@ -239,9 +246,9 @@ document.getElementById('contactForm').addEventListener('submit', function (even
                     <div class="portfolio-item-inner shadow-dark">
                         <div class="portfolio-img">
                             <a href="${item.href}" target="_blank">
-                                <img src="${item.img}" alt="${item.title}">
+                                <img src="${item.img}" alt="${item.desc}">
                                 <div class="overlay">
-                                    <h4>${item.title}</h4>
+                                    <h4>${item.title} ${portfolioTitleNum++}</h4>
                                     <p>${item.desc}</p>
                                 </div>
                             </a>
@@ -290,7 +297,6 @@ document.getElementById('contactForm').addEventListener('submit', function (even
         { src: "images/certificate/Best in Website Management.png", title: "Best in Website Management", description: "Surge Freelancing Marketplace, 2024" },
         { src: "images/certificate/Getting Hired with these amazon virtual assistant task.png", title: "Amazon Virtual Assistant Tasks", description: "Surge Freelancing Marketplace, 2024" },
         { src: "images/certificate/Content Marketing Strategy in social media.png", title: "Content Marketing Strategy", description: "Surge Freelancing Marketplace, 2024" },
-        { src: "images/certificate/AnotherCertificate.jpg", title: "Another Certificate", description: "Another Place, 2024" },
     ];
     const itemsPerPageCertificates = 6;
     let currentPageCertificates = 1;
