@@ -247,7 +247,7 @@ document.getElementById('contactForm').addEventListener('submit', function (even
                         <div class="portfolio-img">
                             <a href="${item.href}" target="_blank">
                                 <img src="${item.img}" alt="${item.desc}">
-                                <div class="overlay">
+                                <div class="overlay" title="${item.desc}">
                                     <h4>${item.title} ${portfolioTitleNum++}</h4>
                                     <p>${item.desc}</p>
                                 </div>
@@ -319,7 +319,7 @@ document.getElementById('contactForm').addEventListener('submit', function (even
                         <div class="certificate-img">
                             <a href="${cert.src}" target="_blank">
                                 <img src="${cert.src}" alt="${cert.title}">
-                                <div class="overlay">
+                                <div class="overlay" title="${cert.title}">
                                 <h4>${cert.title}</h4>
                                 <p>${cert.description}</p>
                                 </div>
@@ -340,19 +340,23 @@ document.getElementById('contactForm').addEventListener('submit', function (even
 
         const totalPages = Math.ceil(certificates.length / itemsPerPageCertificates);
 
-        for (let i = 1; i <= totalPages; i++) {
-            const button = document.createElement('button');
-            button.innerText = i;
-            button.classList.add('page-btn');
-            if (i === currentPageCertificates) button.classList.add('active');
+        if (totalPages > 1) {
+            for (let i = 1; i <= totalPages; i++) {
+                const button = document.createElement('button');
+                button.innerText = i;
+                button.classList.add('page-btn');
+                if (i === currentPageCertificates) button.classList.add('active');
 
-            button.addEventListener('click', () => {
-                currentPageCertificates = i;
-                displayCertificates(currentPageCertificates);
-                setupCertificatePagination();
-            });
+                button.addEventListener('click', () => {
+                    currentPageCertificates = i;
+                    displayCertificates(currentPageCertificates);
+                    setupCertificatePagination();
+                });
 
-            pagination.appendChild(button);
+                pagination.appendChild(button);
+            }
+        } else {
+            pagination.style.display = 'none';
         }
     }
 
@@ -360,6 +364,7 @@ document.getElementById('contactForm').addEventListener('submit', function (even
     displayCertificates(currentPageCertificates); // Ensure this matches the variable
     setupCertificatePagination();
 })();
+
 
 const navLinkss = document.querySelectorAll('.nav li a');
 
@@ -449,3 +454,4 @@ window.addEventListener('load', function () {
         }, { once: true });
     }, timeout);
 });
+
