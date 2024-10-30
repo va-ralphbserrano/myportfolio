@@ -1373,10 +1373,6 @@ h3.my-profession {
     left: 0;
   }
 
-  .section.open {
-    left: 270px;
-  }
-
   .about .about-content .personal-info .info-item p span {
     display: block;
     margin-left: 0;
@@ -1754,10 +1750,6 @@ footer a i:hover {
      */
   bottom: auto;
   /**
-     * Set the position to absolute to make the aside element a positioned element
-     */
-  position: absolute;
-  /**
      * Set the z-index to 1001 to make the aside element appear on top of the footer
      */
   z-index: 1001;
@@ -1795,7 +1787,7 @@ footer a i:hover {
   footer {
     text-align: center;
   }
-  
+
   footer ul {
     margin-top: 10px;
   }

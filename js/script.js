@@ -403,7 +403,7 @@ ageSpan.textContent = age;
  * Waits for 2 seconds after the page has finished loading before hiding the preloader.
  * This is done to ensure that the preloader is visible long enough to provide a good user experience.
  */
-window.addEventListener('load', function() {
+window.addEventListener('load', function () {
     /**
      * The preloader element.
      * @type {HTMLElement}
@@ -424,7 +424,7 @@ window.addEventListener('load', function() {
     /**
      * Hides the preloader element after the timeout has expired.
      */
-    setTimeout(function() {
+    setTimeout(function () {
         /**
          * Set the opacity of the preloader to 0, which makes it invisible.
          * Also set the pointer-events CSS property to 'none' to prevent any mouse events from being triggered.
@@ -437,7 +437,7 @@ window.addEventListener('load', function() {
          * When the event is triggered, set the display property of the preloader to 'none' to hide it completely.
          * Also set the pointer-events property to 'auto' to allow mouse events to be triggered again.
          */
-        preloader.addEventListener('transitionend', function() {
+        preloader.addEventListener('transitionend', function () {
             preloader.style.display = 'none';
             preloader.style.pointerEvents = 'auto';
         }, { once: true });
