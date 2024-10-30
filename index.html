@@ -90,7 +90,7 @@
             This is the text displayed while the page is loading.
             The text is "LOADING".
         -->
-        <div class="loading-text">LOADING</div>
+        <div class="loading-text">LOADING...</div>
     </div>
     <!-- MAIN CONTAINER START -->
     <div class="main-container">
@@ -125,27 +125,23 @@
             -->
             <ul class="nav" aria-label="Main Navigation">
                 <li itemprop="itemListElement" itemscope itemtype="http://schema.org/SiteNavigationElement">
-                    <a href="#home" class="active" itemprop="url"><i class="fa-solid fa-house-chimney"></i>
+                    <a href="#home" class="active" itemprop="url" title="Home"><i class="fa-solid fa-house-chimney"></i>
                         <span itemprop="name">Home</span></a>
                 </li>
                 <li itemprop="itemListElement" itemscope itemtype="http://schema.org/SiteNavigationElement">
-                    <a href="#about" itemprop="url"><i class="fa fa-user"></i> <span itemprop="name">About</span></a>
+                    <a href="#about" itemprop="url" title="About"><i class="fa fa-user"></i> <span itemprop="name">About</span></a>
                 </li>
                 <li itemprop="itemListElement" itemscope itemtype="http://schema.org/SiteNavigationElement">
-                    <a href="#services" itemprop="url"><i class="fa fa-list"></i> <span
-                            itemprop="name">Services</span></a>
+                    <a href="#services" itemprop="url" title="Services"><i class="fa fa-list"></i> <span itemprop="name">Services</span></a>
                 </li>
                 <li itemprop="itemListElement" itemscope itemtype="http://schema.org/SiteNavigationElement">
-                    <a href="#portfolio" itemprop="url"><i class="fa fa-briefcase"></i> <span
-                            itemprop="name">Portfolio</span></a>
+                    <a href="#portfolio" itemprop="url" title="Portfolio"><i class="fa fa-briefcase"></i> <span itemprop="name">Portfolio</span></a>
                 </li>
                 <li itemprop="itemListElement" itemscope itemtype="http://schema.org/SiteNavigationElement">
-                    <a href="#certificates" itemprop="url"><i class="fa fa-certificate"></i> <span
-                            itemprop="name">Certificates</span></a>
+                    <a href="#certificates" itemprop="url" title="Certificates"><i class="fa fa-certificate"></i> <span itemprop="name">Certificates</span></a>
                 </li>
                 <li itemprop="itemListElement" itemscope itemtype="http://schema.org/SiteNavigationElement">
-                    <a href="#contact" itemprop="url"><i class="fa fa-comments"></i> <span
-                            itemprop="name">Contact</span></a>
+                    <a href="#contact" itemprop="url" title="Contact"><i class="fa fa-comments"></i> <span itemprop="name">Contact</span></a>
                 </li>
             </ul>
         </div>
@@ -177,7 +173,7 @@
                                 in freediving—a sport that fosters focus, resilience, and a deep connection with the
                                 underwater world.
                             </p>
-                            <a href="asset/Ralph Bernard Serrano CV.pdf" class="btn" download>Download My CV</a>
+                            <a href="asset/Ralph Bernard Serrano CV.pdf" target="_blank" itemprop="url" title="Download CV" class="btn" download>Download My CV</a>
                         </div>
                         <div class="home-img padd-15">
                             <img src="images/hero.png"
@@ -940,6 +936,38 @@
         </div>
     </div>
     <!-- STYLE SWITCHER END-->
+    <footer>
+        <div class="footer-content padd-15">
+            <p>Copyright &#169; 2024. All rights reserved.</p>
+            <ul class="socials">
+                <li>
+                    <a href="https://www.linkedin.com/in/ralphbserrano" target="_blank">
+                        <i class="fab fa-linkedin" title="My LinkedIn Profile"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.facebook.com/va.ralphbserrano/" target="_blank">
+                        <i class="fab fa-facebook" title="My Facebook Page"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/@RalphBernardSerrano" target="_blank">
+                        <i class="fab fa-youtube" title="My YouTube Channel"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/ralphbserrano" target="_blank">
+                        <i class="fab fa-github" title="My GitHub Repo"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.upwork.com/freelancers/~01fc7b069d50ef3e6c" target="_blank">
+                        <i class="fab fa-upwork" title="My Upwork Profile"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </footer>
     <!-- JSS FILES-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.js"
         integrity="sha512-+2pW8xXU/rNr7VS+H62aqapfRpqFwnSQh9ap6THjsm41AxgA0MhFRtfrABS+Lx2KHJn82UOrnBKhjZOXpom2LQ=="

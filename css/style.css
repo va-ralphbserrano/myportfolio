@@ -1451,7 +1451,9 @@ h3.my-profession {
   /**
    * Set the background color to a dark shade of the primary color
    */
-  background-color: #333;
+  background-image: url("/images/wallpaperflare.com_wallpaper.jpg");
+  background-size: cover;
+  background-position: center;
 
   /**
    * Set the width and height of the preloader to 100% of the viewport
@@ -1501,14 +1503,35 @@ h3.my-profession {
   font-weight: bold;
 
   /**
-   * Set the color of the loading text to the primary color
+   * Set the background of the loading text to an image
+   * The image will only be visible inside the text
    */
-  color: #ff7f00;
+  color: orange;
 
   /**
    * Apply the pulse animation to the loading text
    */
   animation: pulse 2s ease-in-out infinite;
+
+  /**
+   * Set the position of the loading text to absolute
+   */
+  position: absolute;
+
+  /**
+   * Set the bottom of the loading text to 1em
+   */
+  bottom: 1em;
+
+  /**
+   * Set the left of the loading text to 50%
+   */
+  left: 50%;
+
+  /**
+   * Set the transform of the loading text to translateX(-50%)
+   */
+  transform: translateX(-50%);
 }
 
 /**
@@ -1546,4 +1569,184 @@ h3.my-profession {
     font-size: 24px;
     letter-spacing: 5px;
   }
+}
+
+/**
+ * Footer styles
+ * 
+ * Styles for the footer element which contains the links to my social media profiles and
+ * a copyright statement.
+ */
+footer {
+  /**
+   * Position the footer at the bottom of the viewport
+   */
+  position: fixed;
+  bottom: 0;
+  /**
+   * Set the width to 100% of the viewport
+   */
+  width: 100%;
+  /**
+   * Center the content horizontally
+   */
+  text-align: center;
+  /**
+   * Add a small amount of padding to the top and bottom of the footer
+   */
+  padding: 5px;
+  /**
+   * Set the background color to a dark shade of the primary color
+   */
+  background-color: var(--bg-black-900);
+  /**
+   * Set the text color to the secondary color
+   */
+  color: var(--text-black-700);
+  /**
+   * Set the z-index of the footer to 1000 to ensure it appears on top of all other elements
+   */
+  z-index: 1000;
+  /**
+   * Set the display to flex to center the content both horizontally and vertically
+   */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /**
+   * Set the transition for the background color and text color to 0.3s ease
+   */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/**
+ * Styles for the paragraphs in the footer
+ */
+footer p {
+  /**
+   * Remove the default margin from the paragraphs
+   */
+  margin: 0;
+}
+
+/**
+ * Styles for the links in the footer
+ */
+footer a {
+  /**
+   * Set the color of the links to the primary color
+   */
+  color: var(--skin-color);
+  /**
+   * Remove the underline from the links
+   */
+  text-decoration: none;
+  /**
+   * Add a small amount of margin to the left and right of the links
+   */
+  margin: 0 5px;
+  /**
+   * Set the transition for the color to 0.3s ease
+   */
+  transition: color 0.3s ease;
+}
+
+/**
+ * Styles for the links on hover
+ */
+footer a:hover {
+  /**
+   * Add an underline to the links on hover
+   */
+  text-decoration: underline;
+}
+
+/**
+ * Styles for the unordered list in the footer
+ */
+footer ul {
+  /**
+   * Remove the default list style
+   */
+  list-style: none;
+  /**
+   * Remove the default margin and padding from the unordered list
+   */
+  margin: 0;
+  padding: 0;
+  /**
+   * Set the display to flex to center the content both horizontally and vertically
+   */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /**
+   * Set the flex basis and maximum width to 100% to fill the container
+   */
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+/**
+ * Styles for the list items in the unordered list
+ */
+footer ul li {
+  /**
+   * Set the display to inline block to make the list items display inline
+   */
+  display: inline-block;
+  /**
+   * Add a small amount of margin to the left and right of the list items
+   */
+  margin: 0 10px;
+}
+
+/**
+ * Styles for the icon elements in the links
+ */
+footer a i {
+  /**
+   * Set the font size to 20px
+   */
+  font-size: 20px;
+  /**
+   * Set the display to inline to make the icon elements display inline
+   */
+  display: inline;
+  /**
+   * Set the transition for the transform property to 0.3s ease
+   */
+  transition: transform 0.3s ease;
+}
+
+/**
+ * Styles for the icon elements on hover
+ */
+footer a i:hover {
+  /**
+   * Scale the icon elements by 1.2 on hover
+   */
+  transform: scale(1.2);
+}
+
+.aside {
+  /**
+     * Set the bottom property to auto to move the aside element to the top of the viewport
+     */
+  bottom: auto;
+  /**
+     * Set the position to absolute to make the aside element a positioned element
+     */
+  position: absolute;
+  /**
+     * Set the z-index to 1001 to make the aside element appear on top of the footer
+     */
+  z-index: 1001;
+}
+
+.section {
+  /**
+     * Add a small amount of padding to the bottom of the section
+     */
+  padding-bottom: 55px;
 }
