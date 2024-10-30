@@ -346,18 +346,37 @@ ul {
   font-size: 16px;
   font-weight: 600;
   display: block;
-  border-bottom: 1px solid var(--bg-black-50);
   color: var(--text-black-900);
   padding: 5px 15px;
+  position: relative;
+  overflow: hidden;
+}
+
+.aside .nav li a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: var(--bg-black-50);
+  border-radius: 25px;
+  transition: width 0.3s ease;
+  z-index: -1;
+}
+
+.aside .nav li a:hover:not(.active)::before {
+  width: 100%;
 }
 
 .aside .nav li a:hover:not(.active) {
-  background-color: hsl(0, 0%, 75%);
-  border-radius: 25px;
+  color: var(--text-black-900);
 }
 
 .aside .nav li a.active {
-  color: var(--skin-color);
+  color: var(--bg-black-100);
+  background-color: var(--skin-color);
+  border-radius: 25px;
 }
 
 .nav li a:hover:not(.active) i {
