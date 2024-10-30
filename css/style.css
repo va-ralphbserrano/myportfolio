@@ -1470,7 +1470,7 @@ h3.my-profession {
   /**
    * Set the background color to a dark shade of the primary color
    */
-  background-image: url("/images/wallpaperflare.com_wallpaper.jpg");
+  background-image: url("../images/wallpaper.jpg");
   background-size: cover;
   background-position: center;
 
