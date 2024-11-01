@@ -410,7 +410,7 @@ document.getElementById('contactForm').addEventListener('submit', function (even
                         </div>
                     </div>
                 </div>`;
-                projectsContainer.innerHTML += projectsItem;
+            projectsContainer.innerHTML += projectsItem;
         });
     }
 
