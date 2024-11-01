@@ -366,6 +366,90 @@ document.getElementById('contactForm').addEventListener('submit', function (even
 })();
 
 
+
+// Projects Section Logic
+// This script is responsible for displaying the projects items and setting up the pagination
+(function () {
+    const projectsData = [
+        { img: 'images/projects/diceroller.png', href: 'https://va-ralphbserrano.github.io/randomDice/', title: 'Project', desc: 'Random Dice Roller' },
+    ];
+
+    // Randomize the portfolio items
+    for (let i = projectsData.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [projectsData[i], projectsData[j]] = [projectsData[j], projectsData[i]];
+    }
+
+    const itemsPerPage = 6;
+    let currentPage = 1;
+
+    /**
+     * Displays the projects items based on the current page
+     * @param {number} page The current page number
+     */
+    function displayProjectsItems(page) {
+        const startIndex = (page - 1) * itemsPerPage;
+        const endIndex = startIndex + itemsPerPage;
+        const itemsToDisplay = projectsData.slice(startIndex, endIndex);
+        var projectsTitleNum = (page - 1) * itemsPerPage + 1;
+        const projectsContainer = document.getElementById('projects-container');
+        projectsContainer.innerHTML = '';
+
+        itemsToDisplay.forEach(item => {
+            const projectsItem = `
+                <div class="projects-item padd-15">
+                    <div class="projects-item-inner shadow-dark">
+                        <div class="projects-img">
+                            <a href="${item.href}" target="_blank">
+                                <img src="${item.img}" alt="${item.desc}">
+                                <div class="overlay" title="${item.desc}">
+                                    <h4>${item.title} ${projectsTitleNum++}</h4>
+                                    <p>${item.desc}</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>`;
+                projectsContainer.innerHTML += projectsItem;
+        });
+    }
+
+    /**
+     * Sets up the pagination buttons
+     */
+    function setupPagination() {
+        const totalPages = Math.ceil(projectsData.length / itemsPerPage);
+        const paginationContainer = document.getElementById('projects-pagination');
+
+        if (totalPages > 1) {
+            paginationContainer.innerHTML = '';
+
+            for (let i = 1; i <= totalPages; i++) {
+                const pageButton = document.createElement('button');
+                pageButton.textContent = i;
+                pageButton.classList.add('page-btn');
+                if (i === currentPage) pageButton.classList.add('active');
+
+                pageButton.addEventListener('click', () => {
+                    currentPage = i;
+                    displayProjectsItems(currentPage);
+                    setupPagination();
+                });
+
+                paginationContainer.appendChild(pageButton);
+            }
+        } else {
+            paginationContainer.style.display = 'none';
+        }
+    }
+
+    displayProjectsItems(currentPage);
+    setupPagination();
+})();
+
+
+
+
 const navLinkss = document.querySelectorAll('.nav li a');
 
 navLinkss.forEach(link => {

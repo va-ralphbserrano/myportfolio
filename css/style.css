@@ -1190,6 +1190,112 @@ h3.my-profession {
   margin: 0;
   text-align: center;
 }
+/* PROJECTS */
+.projects{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Center the items in the certificates section */
+}
+
+.projects .container {
+  padding-bottom: 40px;
+}
+
+.projects .projects-heading {
+  flex: 0 0 100%;
+  max-width: 100%;
+  margin-bottom: 40px;
+}
+
+.projects .projects-heading h2 {
+  color: var(--text-black-900);
+  font-weight: 500;
+}
+
+.projects .section-title {
+  flex: 0 0 100%;
+  max-width: 100%;
+  margin-bottom: 40px;
+}
+
+.projects .section-title h2 {
+  color: var(--text-black-900);
+  font-weight: 500;
+}
+
+.projects .projects-item {
+  flex: 0 0 33.33%;
+  max-width: 33.33%;
+  margin-bottom: 30px;
+}
+
+.projects .projects-item .projects-item-inner {
+  border: 6px solid var(--text-black-900);
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+}
+
+.projects .projects-item-inner .projects-img {
+  position: relative;
+}
+
+.projects .projects-item-inner .projects-img img {
+  width: 100%;
+  display: block;
+  transition: transform 0.3s ease;
+  /* Smooth zoom effect */
+}
+
+.projects .projects-item-inner .projects-img:hover img {
+  transform: scale(1.05);
+  filter: grayscale(100%) blur(1px);
+  /* Scale image on hover */
+}
+
+.projects .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  /* Fade effect */
+}
+
+.projects .projects-item-inner:hover .overlay {
+  opacity: 1;
+  /* Show overlay on hover */
+}
+
+.overlay h4 {
+  font-size: 20px;
+  margin: 0;
+  text-align: center;
+}
+
+.overlay p {
+  font-size: 14px;
+  margin: 0;
+  text-align: center;
+}
+
+#projects-pagination {
+  width: 100%;
+  /* Set width to 100% for full container space */
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
 
 /* CONTACT */
 .contact-title {
