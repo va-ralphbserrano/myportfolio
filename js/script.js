@@ -406,7 +406,7 @@ var age = Math.floor((today - birthDate) / (1000 * 60 * 60 * 24 * 365.25));
  * Sets the text content of the #age span to the calculated age.
  */
 ageSpan.textContent = age;
-
+document.querySelector('.info-item[itemprop="age"]').setAttribute('content', age);
 
 /**
  * Hides the preloader element after the page has finished loading.
