@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../mockprojects/randomDice"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "myportfolio",
+		"gitdoc.enabled": false
+	}
+}
